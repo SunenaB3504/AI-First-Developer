@@ -4,6 +4,7 @@ import { auth } from './firebase/config';
 import Layout from './components/layout/Layout';
 import UserProfile from './components/profile/UserProfile';
 import AuthPage from './components/auth/AuthPage';
+import LearningLayout from './components/learning/LearningLayout';
 import './App.css';
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
 
   return (
     <Layout>
-      {user ? <UserProfile /> : <AuthPage />}
+      {user ? <LearningLayout /> : <AuthPage />}
     </Layout>
   );
 }

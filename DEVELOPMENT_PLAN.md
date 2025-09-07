@@ -10,8 +10,8 @@ This plan is structured in four distinct phases, aligning with the implementatio
 
 *   **Objective**: Establish the project's technical foundation and core user-facing features.
 *   **Key Tasks**:
-    *   [ ] Set up development environments (Web & Mobile).
-    *   [ ] Initialize project structure and version control (Git).
+    *   [x] Set up development environments (Web & Mobile).
+    *   [x] Initialize project structure and version control (Git).
     *   [x] Implement core UI layout and navigation components (Header, Footer, Side/Bottom Nav).
     *   [x] Develop the user authentication system (Firebase Auth: email, social logins).
     *   [x] Create user profile management pages.
@@ -23,7 +23,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
 *   **Key Tasks**:
     *   [ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML, CSS, JS, etc.).
     *   [ ] **Features**:
-        *   [ ] Create the interactive tutorial and lesson interface.
+        *   [x] Create the interactive tutorial and lesson interface.
         *   [ ] Develop the real-time code playground with instant feedback.
         *   [ ] Integrate the basic AI prompt system for personalized guidance.
         *   [ ] Implement the progress tracking UI (progress bars, chapter completion status).

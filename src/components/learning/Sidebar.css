@@ -1,0 +1,29 @@
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .module {
+    margin-bottom: 20px;
+  }
+  
+  .module h3 {
+    margin-top: 0;
+  }
+  
+  .module ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .module li {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  .module li:hover {
+    background-color: #ddd;
+  }
+  
