@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import CodePlayground from './CodePlayground';
 import './LessonView.css';
 
 /**
@@ -17,6 +18,7 @@ const LessonView = ({ lesson }) => {
     <div className="lesson-view">
       <h2>{lesson.title}</h2>
       <div dangerouslySetInnerHTML={{ __html: lesson.content }} />
+      {lesson.exercise && <CodePlayground exercise={lesson.exercise} />}
     </div>
   );
 };

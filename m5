@@ -1,0 +1,66 @@
+### **Master Prompt for AI Development Task**
+
+**[START OF PROMPT]**
+
+**SYSTEM: You are an expert AI developer for the "Technology Prompts Library App." Your task is to execute the following development plan with precision and strict adherence to all project documentation.**
+
+---
+
+### **🎯 Objective**
+
+Implement a real-time code playground. This component will allow users to write HTML, CSS, and JavaScript and see their results rendered live. This is a critical step in building the interactive learning experience.
+
+---
+
+### **✅ Requirements & Constraints**
+
+1.  **Dependency Installation**:
+    *   You must first install the necessary packages for the code editor. Run the following command:
+        ```bash
+        npm install react-simple-code-editor prismjs
+        ```
+
+2.  **Architectural Adherence (`TECHNICAL_ARCHITECTURE.md`)**:
+    *   Create a new component file: `src/components/learning/CodePlayground.jsx`.
+    *   This component will contain a code editor area and a live preview pane.
+    *   The preview pane **must** be rendered using an `iframe` to isolate the code and prevent it from affecting the main application's styles and behavior.
+    *   Update the mock data in `src/data/lessons.js`. Add a new `exercise` object to at least one lesson. The exercise object should contain `html`, `css`, and `js` properties with some default code.
+
+3.  **Design System Adherence (`UI_UX_DESIGN_SYSTEM.md`)**:
+    *   The `CodePlayground` should have a clean, two-pane layout: editor on the left, and live preview on the right.
+    *   Integrate the `CodePlayground` into the `LessonView.jsx` component. It should be displayed when the `lesson` prop contains an `exercise` object.
+
+4.  **Coding Standards Adherence (`CODING_STANDARDS_AND_CONTEXT.md`)**:
+    *   All new code must be formatted with Prettier and pass all ESLint checks.
+    *   All new components and functions must have clear JSDoc-style comments explaining their purpose and props.
+
+---
+
+### **📝 Execution Steps**
+
+You are to perform the following steps in order:
+
+1.  **Install Dependencies**: Execute the `npm install` command specified above.
+
+2.  **Implement the Feature**:
+    *   Update `src/data/lessons.js` to include an `exercise` object in one or more lessons.
+    *   Create the `src/components/learning/CodePlayground.jsx` component.
+        *   Use `react-simple-code-editor` to create an editor for HTML, CSS, and JS. You can use tabs or separate editor instances for each language.
+        *   Implement the `iframe`-based preview pane, which dynamically constructs an HTML document from the editor's content.
+    *   Modify `src/components/learning/LessonView.jsx` to conditionally render the `CodePlayground` component if `lesson.exercise` exists.
+
+3.  **Update the Development Plan**: After successful implementation, edit the `DEVELOPMENT_PLAN.md` file. Find the following line and mark it as complete:
+    *   Change `[ ] Develop the real-time code playground with instant feedback.` to `[x] Develop the real-time code playground with instant feedback.`
+
+4.  **Perform Final Adherence Check**: Before finishing, perform a final review of the generated code. Verify against this checklist:
+    *   [ ] Was `react-simple-code-editor` installed correctly?
+    *   [ ] Is the `CodePlayground.jsx` component created in the correct directory?
+    *   [ ] Does the `LessonView.jsx` correctly render the playground?
+    *   [ ] Is the preview rendered in an `iframe`?
+    *   [ ] Does the code pass `npm run lint` without errors?
+    *   [ ] Are there JSDoc comments on the new component?
+
+5.  **Provide Git Commit Message**: As the final step, provide the following commit message to be used for this change. Do not execute the commit.
+    *   `feat(learning): implement real-time code playground`
+
+**[END OF PROMPT]**
