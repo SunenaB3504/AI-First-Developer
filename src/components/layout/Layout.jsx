@@ -18,9 +18,10 @@ const Layout = ({ children }) => {
 
   const mainStyle = {
     flex: 1,
-    paddingTop: '80px', // To offset the fixed header
-    paddingLeft: '16px',
-    paddingRight: '16px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: '60px', // Adjust to ensure content is below the header
   }
 
   return (
