@@ -1,10 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 /**
  * @file Firebase configuration and initialization.
- * @description This file initializes the Firebase app and exports the auth service.
+ * @description This file initializes the Firebase app and exports the auth and firestore services.
  * It uses environment variables for configuration to keep sensitive data secure.
  */
 
@@ -28,3 +29,9 @@ const app = initializeApp(firebaseConfig);
  * @type {import("firebase/auth").Auth}
  */
 export const auth = getAuth(app);
+
+/**
+ * Firebase Firestore database instance.
+ * @type {import("firebase/firestore").Firestore}
+ */
+export const db = getFirestore(app);

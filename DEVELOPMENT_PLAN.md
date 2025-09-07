@@ -13,9 +13,9 @@ This plan is structured in four distinct phases, aligning with the implementatio
     *   [ ] Set up development environments (Web & Mobile).
     *   [ ] Initialize project structure and version control (Git).
     *   [x] Implement core UI layout and navigation components (Header, Footer, Side/Bottom Nav).
-    *   [ ] Develop the user authentication system (Firebase Auth: email, social logins).
+    *   [x] Develop the user authentication system (Firebase Auth: email, social logins).
     *   [x] Create user profile management pages.
-    *   [ ] Build the backend infrastructure for progress tracking (Firestore database schema).
+    *   [x] Build the backend infrastructure for progress tracking (Firestore database schema).
 
 #### **Phase 2: Core Learning Experience (Weeks 5-8)**
 
