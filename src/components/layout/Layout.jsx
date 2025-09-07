@@ -18,11 +18,8 @@ const Layout = ({ children }) => {
 
   const mainStyle = {
     flex: 1,
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    paddingTop: '60px', // Adjust to ensure content is below the header
-  }
+    paddingTop: '80px', // Adjust to ensure content is below the header
+  };
 
   return (
     <div style={layoutStyle}>
