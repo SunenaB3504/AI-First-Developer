@@ -1,12 +1,13 @@
-import Layout from './components/layout/Layout'
-import './App.css'
+import Layout from './components/layout/Layout';
+import UserProfile from './components/profile/UserProfile';
+import './App.css';
 
 function App() {
   return (
     <Layout>
-      {/* The main content of the application will go here */}
+      <UserProfile />
     </Layout>
-  )
+  );
 }
 
-export default App
+export default App;
