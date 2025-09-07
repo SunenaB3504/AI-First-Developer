@@ -19,7 +19,7 @@ const Header = () => {
 
   return (
     <header style={headerStyle}>
-      <h1>Technology Prompts Library</h1>
+      <h1>Welcome to the Learning Platform</h1>
     </header>
   )
 }
