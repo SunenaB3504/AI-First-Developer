@@ -3,7 +3,7 @@ import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
 import Layout from './components/layout/Layout';
 import UserProfile from './components/profile/UserProfile';
-import LoginForm from './components/auth/LoginForm';
+import AuthPage from './components/auth/AuthPage';
 import './App.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <Layout>
-      {user ? <UserProfile /> : <LoginForm />}
+      {user ? <UserProfile /> : <AuthPage />}
     </Layout>
   );
 }

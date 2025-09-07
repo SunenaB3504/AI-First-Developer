@@ -1,0 +1,23 @@
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-toggle {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #2196F3;
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}

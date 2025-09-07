@@ -2,23 +2,22 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
 
 /**
  * @file Firebase configuration and initialization.
  * @description This file initializes the Firebase app and exports the auth and firestore services.
- * It uses environment variables for configuration to keep sensitive data secure.
  */
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  apiKey: "AIzaSyDtFFUFSfT6sOqnxJVrZ3-H3i66Cga2th0",
+  authDomain: "ai-first-developer.firebaseapp.com",
+  projectId: "ai-first-developer",
+  storageBucket: "ai-first-developer.firebasestorage.app",
+  messagingSenderId: "914515554273",
+  appId: "1:914515554273:web:d8b69ab353166c30196ca0",
+  measurementId: "G-SXJPECZJZ3"
 };
 
 // Initialize Firebase
@@ -35,3 +34,9 @@ export const auth = getAuth(app);
  * @type {import("firebase/firestore").Firestore}
  */
 export const db = getFirestore(app);
+
+/**
+ * Firebase Analytics instance.
+ * @type {import("firebase/analytics").Analytics}
+ */
+export const analytics = getAnalytics(app);
