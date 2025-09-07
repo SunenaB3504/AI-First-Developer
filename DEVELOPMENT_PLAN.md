@@ -12,7 +12,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
 *   **Key Tasks**:
     *   [ ] Set up development environments (Web & Mobile).
     *   [ ] Initialize project structure and version control (Git).
-    *   [ ] Implement core UI layout and navigation components (Header, Footer, Side/Bottom Nav).
+    *   [x] Implement core UI layout and navigation components (Header, Footer, Side/Bottom Nav).
     *   [ ] Develop the user authentication system (Firebase Auth: email, social logins).
     *   [ ] Create user profile management pages.
     *   [ ] Build the backend infrastructure for progress tracking (Firestore database schema).
