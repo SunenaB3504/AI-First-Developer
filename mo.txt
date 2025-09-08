@@ -1,0 +1,1 @@
+Help to create a prompt wihich will initiate next step with 1) complete adheance to to documentation 2) after each excution update  DEVELOPMENT_PLAN.md 3) Run final recheck for doeument adhhereance 4) copy the prompt to file m6.
