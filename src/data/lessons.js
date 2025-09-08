@@ -7,16 +7,7 @@ export const modules = [
     id: 'html',
     title: 'HTML5 Fundamentals',
     lessons: [
-      { 
-        id: 'html-1', 
-        title: 'Introduction to HTML', 
-        content: '<h1>HTML is the standard markup language for creating Web pages.</h1>',
-        exercise: {
-          html: '<h1>Hello, World!</h1>',
-          css: 'h1 { color: blue; }',
-          js: 'console.log("Hello from the console!");',
-        } 
-      },
+      { id: 'html-1', title: 'Introduction to HTML', content: '<h1>HTML is the standard markup language for creating Web pages.</h1>' },
       { id: 'html-2', title: 'HTML Tags and Elements', content: '<p>HTML tags are element names surrounded by angle brackets.</p>' },
     ],
   },

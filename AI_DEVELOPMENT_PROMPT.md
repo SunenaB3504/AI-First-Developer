@@ -12,13 +12,12 @@ Create an interactive learning platform that guides users through a structured 2
 ## 📝 **Detailed Requirements**
 
 ### **1. Primary Functionality**
-- **Interactive Learning Modules**: 25 technologies organized across 5 progressive tiers
+- **Technology Reference**: Detailed information on 25 technologies organized across 5 progressive tiers
 - **AI-Powered Assistance**: Personalized prompts and intelligent learning recommendations
 - **Progress Tracking System**: Chapter completion, achievement badges, and detailed analytics
 - **Cross-Platform Development**: Web application + Native mobile apps (Android/iOS)
 - **Text-to-Speech Integration**: Audio learning capabilities for accessibility
 - **Offline Learning**: PWA features enabling learning without internet connectivity
-- **Real-time Code Playground**: Interactive coding environment with instant feedback
 
 ### **2. Technical Architecture Requirements**
 
@@ -128,11 +127,9 @@ Create an interactive learning platform that guides users through a structured 2
 
 ### **AI-Powered Features:**
 1. **Personalized Learning Paths**: Adapt curriculum based on user progress and preferences
-2. **Intelligent Code Review**: AI analysis of user code with improvement suggestions
-3. **Dynamic Prompt Generation**: Context-aware prompts based on current learning stage
-4. **Smart Recommendations**: Suggest next technologies based on career goals
-5. **Automated Assessment**: AI-powered evaluation of practical exercises
-6. **Learning Analytics**: Insights into learning patterns and optimization suggestions
+2. **Dynamic Prompt Generation**: Context-aware prompts based on current learning stage
+3. **Smart Recommendations**: Suggest next technologies based on career goals
+4. **Learning Analytics**: Insights into learning patterns and optimization suggestions
 
 ### **AI Prompt Categories:**
 - **Beginner Prompts**: Step-by-step guidance for fundamental concepts
@@ -276,12 +273,9 @@ Create an interactive learning platform that guides users through a structured 2
       "title": "Section Name",
       "content": "Learning content",
       "keyTopics": ["topic1", "topic2"],
-      "practicalExercises": ["exercise descriptions"],
       "codeExamples": ["working code samples"]
     }
   ],
-  "projects": ["hands-on projects"],
-  "assessments": ["quizzes and evaluations"],
   "aiPrompts": ["technology-specific AI prompts"],
   "resources": ["additional learning materials"],
   "toolsRequired": ["development tools"],

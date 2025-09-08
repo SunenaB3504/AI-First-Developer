@@ -1,7 +1,7 @@
 {
   "name": "ai-first-developer",
   "version": "1.0.0",
-  "description": "",
+  "description": "A technology reference app built with an AI-first approach.",
   "main": "index.js",
   "scripts": {
     "dev": "vite",

@@ -23,8 +23,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
 *   **Key Tasks**:
     *   [ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML, CSS, JS, etc.).
     *   [ ] **Features**:
-        *   [x] Create the interactive tutorial and lesson interface.
-        *   [x] Develop the real-time code playground with instant feedback.
+        *   [ ] Create the interactive tutorial and lesson interface.
         *   [ ] Integrate the basic AI prompt system for personalized guidance.
         *   [ ] Implement the progress tracking UI (progress bars, chapter completion status).
 
@@ -65,7 +64,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
 
 This checklist tracks the creation of all required content features for each of the 25 technologies.
 
-| Technology | Tier | Learning Objectives | Sections & Content | Practical Exercises | Code Examples | Projects | Assessments | AI Prompts |
+| Technology | Tier | Learning Objectives | Sections & Content | Code Examples | AI Prompts |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Tier 1** | | | | | | | | |
 | HTML5 | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |

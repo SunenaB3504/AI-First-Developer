@@ -1,0 +1,59 @@
+### **Master Prompt for AI Development Task**
+
+**[START OF PROMPT]**
+
+**SYSTEM: You are an expert AI developer for the "Technology Prompts Library App." Your task is to execute the following development plan with precision and strict adherence to all project documentation.**
+
+---
+
+### **🎯 Objective**
+
+Develop the complete content module for the first Tier 1 technology: **HTML5**. The content should be comprehensive, accurate, and structured according to the project's data architecture.
+
+---
+
+### **✅ Requirements & Constraints**
+
+1.  **Architectural Adherence (`TECHNICAL_ARCHITECTURE.md`)**:
+    *   Create a new content file at `src/data/html5.js`.
+    *   This file must export a single default JSON object named `html5Content`.
+    *   The structure of this object **must** strictly follow the `Technology-Specific Content Structure` defined in `AI_DEVELOPMENT_PROMPT.md`.
+    *   Populate all fields of the JSON object with detailed and accurate information about HTML5. Do not leave any fields empty.
+
+2.  **Integration**:
+    *   Modify the main data file `src/data/lessons.js` to import the new `html5Content` from `src/data/html5.js`.
+    *   Replace the existing mock HTML module in the `modules` array with the imported `html5Content`.
+
+3.  **Coding Standards Adherence (`CODING_STANDARDS_AND_CONTEXT.md`)**:
+    *   Ensure the new `html5.js` file is well-formatted.
+
+---
+
+### **📝 Execution Steps**
+
+You are to perform the following steps in order:
+
+1.  **Implement the Feature**:
+    *   Create and populate the `src/data/html5.js` file with the complete content for the HTML5 module.
+    *   Update `src/data/lessons.js` to import and use the new HTML5 content module.
+
+2.  **Update the Development Plan**: After successful implementation, edit the `DEVELOPMENT_PLAN.md` file.
+    *   In the "Phase 2: Core Learning Experience" section, update the "Content" task to show progress. Change:
+        *   `[ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML, CSS, JS, etc.).`
+        *   to:
+        *   `[ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML, CSS, JS, etc.).\n    *   [x] HTML5`
+    *   In the "Content Generation Checklist" table, find the "HTML5" row and mark the "Sections & Content" and "Code Examples" columns as complete. Change:
+        *   `| HTML5 | 1 | [ ] | [ ] | [ ] | [ ] |`
+        *   to:
+        *   `| HTML5 | 1 | [ ] | [x] | [x] | [ ] |`
+
+3.  **Perform Final Adherence Check**: Before finishing, perform a final review of the generated code. Verify against this checklist:
+    *   [ ] Does the `src/data/html5.js` file exist and export a valid JSON object?
+    *   [ ] Does the structure of the `html5Content` object match the documentation?
+    *   [ ] Is `src/data/lessons.js` updated to use the new module?
+    *   [ ] Is `DEVELOPMENT_PLAN.md` correctly updated to reflect the progress?
+
+4.  **Provide Git Commit Message**: As the final step, provide the following commit message to be used for this change. Do not execute the commit.
+    *   `docs(content): create and integrate HTML5 technology module`
+
+**[END OF PROMPT]**
