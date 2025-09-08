@@ -1,0 +1,42 @@
+AI Development Prompt: Tier 1 Content Generation (JavaScript)
+
+🎯 Primary Objective
+Your task is to create the complete content module for the next Tier 1 technology: JavaScript. You must generate a new file, src/data/javascript.js, and integrate it into the application.
+
+📜 Mandatory Adherence to Documentation
+This task must be executed with strict and complete adherence to the project's foundational document: AI_DEVELOPMENT_PROMPT.md. Before writing any code, you must re-read and internalize all guidelines within this document, paying special attention to the following recently added sections:
+
+Content Generation Guidelines: All generated text must be engaging, use analogies, and focus on the "why." The tone must be conversational and suitable for novices.
+Lesson Content Presentation: The data structure you create must support the UI standards for rendering distinct sections for content, key topics, and code examples.
+Security & Privacy Requirements: You must not re-introduce security risks. Any HTML in content strings must be properly escaped (e.g., &lt;div&gt; instead of <div>).
+
+🔄 Execution Workflow
+You must follow this workflow precisely. Do not deviate.
+
+Step 1: Create JavaScript Content Module
+
+Create a new file at src/data/javascript.js.
+Populate this file with the complete content for the JavaScript module, following the exact data structure defined in AI_DEVELOPMENT_PROMPT.md and exemplified by src/data/html5.js and src/data/css3.js.
+The content must be comprehensive, covering topics like variables, data types, functions, DOM manipulation, and asynchronous JavaScript (Promises, async/await).
+Ensure all content meets the quality and tone standards defined in the "Content Generation Guidelines."
+
+Step 2: Integrate the New Module
+
+Update src/data/lessons.js to import and include the new javascriptContent module.
+
+Step 3: Update the Development Plan
+
+Immediately after successfully creating and integrating the JavaScript module, you must edit DEVELOPMENT_PLAN.md.
+In the "Content Generation Checklist" table, update the JavaScript row by marking all columns as complete ([x]).
+
+Step 4: Final Adherence Check
+
+After updating the plan, perform a final self-review.
+Briefly re-read your generated src/data/javascript.js file and confirm that it complies with all documented guidelines (content tone, data structure, HTML escaping).
+State your confirmation of this check in your final response.
+
+✅ Success Criteria
+The javascript.js file is created and populated with high-quality, standards-compliant content.
+The application runs correctly with the new JavaScript module available in the learning path.
+DEVELOPMENT_PLAN.md is accurately updated to reflect the completion of the JavaScript module.
+Your final response confirms that the adherence check was completed.
