@@ -21,7 +21,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
 
 *   **Objective**: Build the main learning features and populate the initial content.
 *   **Key Tasks**:
-    *   [ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML, CSS, JS, etc.).
+    *   [ ] **Content**: Develop and integrate all content for Tier 1 technologies (HTML done).
     *   [ ] **Features**:
         *   [ ] Create the interactive tutorial and lesson interface.
         *   [ ] Integrate the basic AI prompt system for personalized guidance.
@@ -67,7 +67,7 @@ This checklist tracks the creation of all required content features for each of 
 | Technology | Tier | Learning Objectives | Sections & Content | Code Examples | AI Prompts |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **Tier 1** | | | | | | | | |
-| HTML5 | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| HTML5 | 1 | [x] | [x] | [x] | [x] | [ ] | [ ] | [ ] |
 | CSS3 | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | JavaScript | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Browser Dev Tools | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |

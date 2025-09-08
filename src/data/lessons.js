@@ -1,16 +1,10 @@
 /**
  * @file Mock data for lessons and modules.
  */
+import html5Content from './html5.js';
 
 export const modules = [
-  {
-    id: 'html',
-    title: 'HTML5 Fundamentals',
-    lessons: [
-      { id: 'html-1', title: 'Introduction to HTML', content: '<h1>HTML is the standard markup language for creating Web pages.</h1>' },
-      { id: 'html-2', title: 'HTML Tags and Elements', content: '<p>HTML tags are element names surrounded by angle brackets.</p>' },
-    ],
-  },
+  html5Content,
   {
     id: 'css',
     title: 'CSS3 Styling',

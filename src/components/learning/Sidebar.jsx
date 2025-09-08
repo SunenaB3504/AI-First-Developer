@@ -16,8 +16,8 @@ const Sidebar = ({ modules, onLessonClick }) => {
         <div key={module.id} className="module">
           <h3>{module.title}</h3>
           <ul>
-            {module.lessons.map((lesson) => (
-              <li key={lesson.id} onClick={() => onLessonClick(lesson)}>
+            {(module.lessons || module.sections).map((lesson) => (
+              <li key={lesson.id || lesson.title} onClick={() => onLessonClick(lesson)}>
                 {lesson.title}
               </li>
             ))}
