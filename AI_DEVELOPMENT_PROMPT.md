@@ -334,6 +334,7 @@ To ensure the learning material is effective and engaging for novices, all gener
 - **Backup Strategy**: Regular data backups with disaster recovery
 
 ### **Content Security:**
+- **HTML Sanitization**: All dynamically rendered HTML content (e.g., from lesson data) must be sanitized using a library like `DOMPurify` to prevent Cross-Site Scripting (XSS) attacks. The use of `dangerouslySetInnerHTML` is only permissible with sanitized content.
 - **Code Sanitization**: Prevent XSS and injection attacks
 - **API Security**: Rate limiting and authentication for all endpoints
 - **Content Moderation**: AI-powered content filtering for user submissions

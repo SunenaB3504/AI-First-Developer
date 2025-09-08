@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import DOMPurify from 'dompurify';
 import './LessonView.css';
 
 /**
@@ -15,14 +16,15 @@ const LessonView = ({ lesson }) => {
 
   // A simple function to replace \n with <br> for rendering
   const formatContent = (content) => {
-    return content.replace(/\n/g, '<br />');
+    const sanitizedContent = DOMPurify.sanitize(content.replace(/\n/g, '<br />'));
+    return { __html: sanitizedContent };
   };
 
   return (
     <div className="lesson-view">
       <h2>{lesson.title}</h2>
       
-      <div className="lesson-content" dangerouslySetInnerHTML={{ __html: formatContent(lesson.content) }} />
+      <div className="lesson-content" dangerouslySetInnerHTML={formatContent(lesson.content)} />
 
       {lesson.keyTopics && lesson.keyTopics.length > 0 && (
         <div className="key-topics">
