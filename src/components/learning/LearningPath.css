@@ -1,0 +1,112 @@
+.learning-path {
+  width: 280px;
+  background-color: #f7f9fa;
+  border-right: 1px solid #e1e4e8;
+  padding: 20px;
+  overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.path-module {
+  position: relative;
+  padding-left: 30px; /* Space for the main path line */
+}
+
+.module-title {
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #24292e;
+  margin-bottom: 20px;
+}
+
+.path-lessons {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+/* The main vertical line for the entire module */
+.path-module::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 40px; /* Start below the title */
+  bottom: 0;
+  width: 2px;
+  background-color: #d1d5da;
+}
+
+.path-lesson {
+  position: relative;
+  margin-bottom: 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.lesson-node {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.node-circle {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border: 2px solid #d1d5da;
+  border-radius: 50%;
+  z-index: 1;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Horizontal line connecting node to content */
+.path-lesson::after {
+  content: '';
+  position: absolute;
+  left: -18px;
+  top: 50%;
+  width: 18px;
+  height: 2px;
+  background-color: #d1d5da;
+  transform: translateY(-50%);
+}
+
+.lesson-title {
+  padding-left: 10px;
+  font-size: 1em;
+  color: #586069;
+  transition: color 0.2s;
+}
+
+.path-lesson:hover .node-circle {
+  border-color: #0366d6;
+}
+
+.path-lesson:hover .lesson-title {
+  color: #0366d6;
+}
+
+.path-lesson.selected .node-circle {
+  background-color: #0366d6;
+  border-color: #0366d6;
+}
+
+.path-lesson.selected .lesson-title {
+  color: #0366d6;
+  font-weight: 600;
+}
+
+.path-lesson.completed .node-circle {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+.path-lesson.completed .lesson-title {
+  color: #24292e;
+  text-decoration: line-through;
+}

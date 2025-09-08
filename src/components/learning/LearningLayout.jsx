@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from './Sidebar';
+import LearningPath from './LearningPath';
 import LessonView from './LessonView';
 import { modules } from '../../data/lessons';
 import './LearningLayout.css';
@@ -13,7 +13,7 @@ const LearningLayout = () => {
 
   return (
     <div className="learning-layout">
-      <Sidebar modules={modules} onLessonClick={setSelectedLesson} />
+      <LearningPath modules={modules} onLessonClick={setSelectedLesson} selectedLesson={selectedLesson} />
       <LessonView lesson={selectedLesson} />
     </div>
   );

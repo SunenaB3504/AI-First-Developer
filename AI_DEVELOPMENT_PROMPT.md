@@ -112,7 +112,8 @@ Create an interactive learning platform that guides users through a structured 2
 ### **Layout Standards:**
 - **Header**: Fixed navigation with logo, progress indicator, AI assistant button
 - **Content Area**: Scrollable main content with consistent padding
-- **Navigation**: Bottom tab bar for mobile, sidebar for desktop
+- **Navigation**: Bottom tab bar for mobile, a visual learning path for desktop.
+- **Learning Path**: On desktop, the main navigation is a vertically-oriented learning path. It visually represents modules and their lessons as a series of connected nodes, guiding the user through the curriculum in a linear, step-by-step manner.
 - **Footer**: Previous/Next navigation, completion status, bookmark functionality
 
 ### **Interactive Elements:**
