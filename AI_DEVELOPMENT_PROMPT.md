@@ -273,11 +273,21 @@ Create an interactive learning platform that guides users through a structured 2
       "title": "Section Name",
       "content": "Learning content",
       "keyTopics": ["topic1", "topic2"],
-      "codeExamples": ["working code samples"]
+      "codeExamples": [
+        {
+          "title": "Example Title",
+          "code": "working code sample"
+        }
+      ]
     }
   ],
   "aiPrompts": ["technology-specific AI prompts"],
-  "resources": ["additional learning materials"],
+  "resources": [
+    {
+      "title": "Resource Title",
+      "url": "https://example.com"
+    }
+  ],
   "toolsRequired": ["development tools"],
   "bestPractices": ["industry standards"],
   "commonPitfalls": ["things to avoid"],
