@@ -121,6 +121,15 @@ Create an interactive learning platform that guides users through a structured 2
 - **Forms**: Material text fields with floating labels and validation
 - **Modals**: Backdrop blur with smooth slide-in animations
 
+### **Lesson Content Presentation**
+
+To ensure a consistent, engaging, and readable learning experience, the presentation of lesson content must adhere to the following standards:
+
+1.  **Structured Rendering:** The lesson view must be structured to visually separate the main content, key topics, and code examples. It should not be a single, monolithic block of text.
+2.  **Visual Hierarchy:** A clear typographic hierarchy should be used, with a large, prominent title for the lesson section and clear distinctions between headings, paragraphs, and other elements.
+3.  **Key Topics Styling:** Key topics should be rendered as visually distinct "pills" or "tags" inside a highlighted container. This allows for quick scanning of a section's core concepts.
+4.  **Professional Code Blocks:** All code examples must be displayed in a high-contrast block (e.g., a dark background) with a clean monospace font to ensure readability and clear separation from narrative content.
+
 ---
 
 ## 🧠 **AI Integration Specifications**
