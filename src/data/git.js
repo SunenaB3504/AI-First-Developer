@@ -16,12 +16,14 @@ const gitContent = {
   ],
   sections: [
     {
+      id: "git-what-is-version-control",
       title: "What is Version Control?",
       content: "Version Control is a system that records changes to a file or set of files over time so that you can recall specific versions later. Think of it as a 'save' button for your entire project, allowing you to undo mistakes, see who made changes, and manage different versions of your work. Git is the most widely used modern version control system in the world.",
       keyTopics: ["Version Control System (VCS)", "Snapshots", "History"],
       codeExamples: []
     },
     {
+      id: "git-getting-started",
       title: "Getting Started: Installation and Configuration",
       content: "Before you can use Git, you need to install it on your computer. Once installed, you should configure your user name and email address. This is important because every Git commit uses this information, and it’s immutably baked into the commits you start creating.",
       keyTopics: ["Installation", "Configuration", "git config"],
@@ -37,6 +39,7 @@ const gitContent = {
       ]
     },
     {
+      id: "git-basic-workflow",
       title: "The Basic Git Workflow",
       content: "The core of the Git workflow consists of three stages. First, you modify files in your working directory. Second, you stage the files, adding snapshots of them to your staging area. Finally, you commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.",
       keyTopics: ["Working Directory", "Staging Area", "Repository", "git add", "git commit"],
@@ -56,6 +59,7 @@ const gitContent = {
       ]
     },
     {
+      id: "git-branching-and-merging",
       title: "Branching and Merging",
       content: "Branching is a powerful feature in Git that allows you to diverge from the main line of development and continue to do work without messing with that main line. This is perfect for developing new features or fixing bugs. Once your work is complete, you can merge your branch back into the main branch.",
       keyTopics: ["Branching", "Merging", "git branch", "git checkout", "git merge"],
@@ -75,6 +79,7 @@ const gitContent = {
       ]
     },
     {
+      id: "git-remote-repositories",
       title: "Working with Remote Repositories",
       content: "Remote repositories are versions of your project that are hosted on the internet or network somewhere. Collaborating with others involves managing these remote repositories and pushing and pulling data to and from them when you need to share work. A service like GitHub or GitLab hosts your remote repositories.",
       keyTopics: ["Remote", "Push", "Pull", "Clone", "git remote", "git push", "git pull", "git clone"],

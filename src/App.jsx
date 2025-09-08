@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { onAuthStateChanged } from 'firebase/auth';
 import { auth } from './firebase/config';
 import Layout from './components/layout/Layout';
-import UserProfile from './components/profile/UserProfile';
 import AuthPage from './components/auth/AuthPage';
 import LearningLayout from './components/learning/LearningLayout';
+import { ProgressProvider } from './context/ProgressContext';
 import './App.css';
 
 function App() {
@@ -18,9 +18,11 @@ function App() {
   }, []);
 
   return (
-    <Layout>
-      {user ? <LearningLayout /> : <AuthPage />}
-    </Layout>
+    <ProgressProvider>
+      <Layout>
+        {user ? <LearningLayout /> : <AuthPage />}
+      </Layout>
+    </ProgressProvider>
   );
 }
 

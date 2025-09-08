@@ -15,6 +15,7 @@ const html5Content = {
   ],
   sections: [
     {
+      id: "html-introduction",
       title: "Introduction to HTML",
       content: "Think of HTML as the skeleton of a website. Just like a skeleton gives a body its structure, HTML provides the fundamental structure for every web page. 'Hypertext' refers to the links that connect pages, and 'Markup Language' means you use special tags to tell the browser how to display the content. It’s the very first thing you need to learn in web development.",
       keyTopics: ["What is HTML?", "Basic Document Structure", "Doctype Declaration"],
@@ -35,6 +36,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-basic-tags",
       title: "Basic Tags & Text Formatting",
       content: "Think of HTML tags like giving instructions to a very obedient robot (your web browser). You can't just write a sentence and expect it to know it's a headline. You have to wrap it in 'instruction tags' to give it meaning.\n\nFor example, to create a big, important title, you use &lt;h1&gt;. Think of it as telling the robot, 'Make this a top-level headline!' For less important subheadings, you can use &lt;h2&gt;, &lt;h3&gt;, and so on. For any regular paragraph of text, you simply wrap it in &lt;p&gt; tags.\n\nWhat if you want to make a word stand out? To make text bold and show it's important, you use &lt;strong&gt;. To emphasize a word, you can use &lt;em&gt;, which usually makes it italic. It's like adding tone of voice to your text!",
       keyTopics: ["Headings (h1-h6)", "Paragraphs (p)", "Bold (strong)", "Italic (em)", "Line Breaks (br)"],
@@ -49,6 +51,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-links-and-images",
       title: "Links and Images",
       content: "What makes the web 'the web'? Links! A link, or hyperlink, lets you connect your page to another. You create one with the &lt;a&gt; (anchor) tag. The 'href' attribute holds the destination URL, like a street address for your link.\n\nTo make your page more visual, you use the &lt;img&gt; tag to add pictures. This tag needs two things: a 'src' (source) attribute to tell it where to find the image, and an 'alt' (alternative) attribute. The 'alt' text is super important—it describes the image for visually impaired users and also shows up if the image can't load.",
       keyTopics: ["Anchor Tag (a)", "Image Tag (img)", "href attribute", "src attribute", "alt attribute"],
@@ -61,6 +64,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-lists",
       title: "Lists",
       content: "Sometimes you need to organize information into a list. HTML gives you two options. If the order doesn't matter, like a grocery list, you use an unordered list (&lt;ul&gt;) to get bullet points. If the order is crucial, like step-by-step instructions, you use an ordered list (&lt;ol&gt;) to get numbers. Either way, each item in the list gets its own &lt;li&gt; (list item) tag.",
       keyTopics: ["Unordered Lists (ul)", "Ordered Lists (ol)", "List Items (li)"],
@@ -84,6 +88,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-tables",
       title: "Tables",
       content: "When you have data that belongs in a grid, like a price list or a schedule, tables are the perfect tool. You start with a &lt;table&gt; tag. Inside, you build the table row by row with &lt;tr&gt; (table row) tags. For the column titles, you use &lt;th&gt; (table header) to make them stand out. For all the regular data cells, you use &lt;td&gt; (table data). A quick warning: only use tables for data, not for laying out your whole page!",
       keyTopics: ["<table>", "<tr>", "<th>", "<td>", "Table Headers"],
@@ -111,6 +116,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-forms",
       title: "Forms and User Input",
       content: "Forms are how you let users talk back to your website—whether it's a search bar, a login page, or a contact form. You start with a &lt;form&gt; tag, which acts as a container. Inside, the &lt;input&gt; tag is your best friend. By changing its 'type' attribute, it can become a text box, a password field, a checkbox, or a radio button. To make your forms accessible, always pair your inputs with a &lt;label&gt; tag. It tells users exactly what information you're asking for.",
       keyTopics: ["<form>", "<input>", "<textarea>", "<label>", "<button>", "Input Types"],
@@ -132,6 +138,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-semantic-elements",
       title: "Semantic HTML5 Elements",
       content: "Imagine building a house with only one type of brick for everything—walls, floors, and the roof. It would be a confusing mess! Early websites were often built like that, using a generic &lt;div&gt; tag for everything.\n\nSemantic HTML is like having specialized bricks: &lt;header&gt; for the top of your page, &lt;footer&gt; for the bottom, &lt;nav&gt; for your navigation links, and &lt;main&gt; for your primary content. These tags don't just change how things look; they give *meaning* to your content. This is incredibly helpful for search engines like Google to understand your site and for assistive technologies like screen readers to help visually impaired users navigate. It makes your website smarter and more accessible for everyone.",
       keyTopics: ["<header>", "<footer>", "<nav>", "<main>", "<article>", "<section>", "<aside>"],
@@ -158,6 +165,7 @@ const html5Content = {
       ]
     },
     {
+      id: "html-multimedia",
       title: "Multimedia in HTML",
       content: "With HTML5, adding media became incredibly simple. You no longer need clunky plugins to play sounds or videos. Just use the &lt;audio&gt; or &lt;video&gt; tag. If you add the 'controls' attribute, the browser will automatically show a play/pause button, a volume slider, and more. You can even provide multiple file formats using the &lt;source&gt; tag, so if a user's browser can't play one type, it has a fallback option.",
       keyTopics: ["<audio>", "<video>", "controls attribute", "source tag"],

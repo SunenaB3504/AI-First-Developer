@@ -15,6 +15,7 @@ const devtoolsContent = {
   ],
   sections: [
     {
+      id: "devtools-swiss-army-knife",
       title: "Your Web Development Swiss Army Knife",
       content: "Every modern web browser comes with a powerful secret weapon for developers: the Developer Tools (or DevTools). Think of it as an X-ray machine, a mechanic's garage, and a science lab for your website, all rolled into one. You can open it with a simple keyboard shortcut (usually F12 or Ctrl+Shift+I / Cmd+Opt+I). These tools give you an under-the-hood look at what's happening on a webpage, making it essential for building, debugging, and optimizing.",
       keyTopics: ["What are DevTools?", "Opening DevTools", "Main Panels Overview"],
@@ -29,6 +30,7 @@ const devtoolsContent = {
       ]
     },
     {
+      id: "devtools-elements-panel",
       title: "The Elements Panel: Your Live HTML & CSS Editor",
       content: "The Elements panel is like a live, editable version of your website's source code. It shows you the HTML structure as a DOM tree. You can select any element and see all the CSS rules that apply to it, including which ones are being overridden. The best part? You can change things directly in the panel! Want to see how a button looks in a different color? Just change the CSS value and see the result instantly. It's perfect for tweaking styles and diagnosing layout issues.",
       keyTopics: ["Inspecting Elements", "The DOM Tree", "Viewing and Editing CSS", "The Box Model Visualizer"],
@@ -46,6 +48,7 @@ const devtoolsContent = {
       ]
     },
     {
+      id: "devtools-console",
       title: "The Console: Your JavaScript Playground",
       content: "The Console is your direct line of communication with the JavaScript running on a page. It's an interactive command line where you can type and execute JavaScript code. Developers constantly use `console.log()` in their code to print out the values of variables, helping them understand what's happening at different stages. The console also displays errors and warnings, which are crucial clues for finding and fixing bugs in your scripts.",
       keyTopics: ["Logging with console.log()", "Running JavaScript code", "Viewing Errors and Warnings", "The Console API"],
@@ -66,6 +69,7 @@ const finalPrice = calculateTotal(10, 5);`
       ]
     },
     {
+      id: "devtools-network-tab",
       title: "The Network Tab: Watching the Wires",
       content: "A modern webpage rarely consists of a single HTML file. It loads CSS, JavaScript, images, fonts, and often communicates with servers to get data (this is called an API request). The Network tab shows you every single one of these network requests. You can see how long each file took to load, how large it is, and whether the request was successful. It's an indispensable tool for diagnosing slow-loading pages and for debugging communication with a backend server.",
       keyTopics: ["Monitoring Requests", "Filtering Requests", "Inspecting Request/Response Headers", "Checking Status Codes (200, 404, 500)"],

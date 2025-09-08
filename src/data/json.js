@@ -16,12 +16,14 @@ const jsonContent = {
   ],
   sections: [
     {
+      id: "json-introduction-to-json",
       title: "Introduction to JSON",
       content: "JSON, which stands for JavaScript Object Notation, is a lightweight format for storing and transporting data. It's often used when data is sent from a server to a web page. Despite its name, JSON is language-independent, with parsers available for most programming languages.",
       keyTopics: ["Data Interchange", "Lightweight Format", "Human-Readable"],
       codeExamples: []
     },
     {
+      id: "json-syntax-and-structure",
       title: "JSON Syntax and Structure",
       content: "JSON syntax is derived from JavaScript object notation syntax, but it is a text format only. Data is in name/value pairs, separated by commas. Curly braces hold objects, and square brackets hold arrays.",
       keyTopics: ["Key-Value Pairs", "Objects", "Arrays"],
@@ -46,6 +48,7 @@ const jsonContent = {
       ]
     },
     {
+      id: "json-data-types",
       title: "JSON Data Types",
       content: "JSON supports several fundamental data types that can be combined to create complex data structures.",
       keyTopics: ["String", "Number", "Boolean", "Array", "Object", "Null"],
@@ -67,6 +70,7 @@ const jsonContent = {
       ]
     },
     {
+      id: "json-using-json-in-javascript",
       title: "Using JSON in JavaScript",
       content: "JavaScript provides built-in methods to work with JSON. The `JSON.parse()` method converts a JSON string into a JavaScript object, while `JSON.stringify()` converts a JavaScript object into a JSON string. This is essential for sending and receiving data from a server.",
       keyTopics: ["JSON.parse()", "JSON.stringify()", "Serialization", "Deserialization"],
@@ -94,6 +98,7 @@ console.log(jsonCar);
       ]
     },
     {
+      id: "json-common-use-cases",
       title: "Common Use Cases",
       content: "JSON is ubiquitous in modern web development. Its primary use is for transmitting data between a server and a web application in APIs. It's also widely used for configuration files (like in `package.json`), and for storing structured data in NoSQL databases.",
       keyTopics: ["APIs", "Configuration Files", "NoSQL Databases"],

@@ -15,6 +15,7 @@ const javascriptContent = {
   ],
   sections: [
     {
+      id: "javascript-language-of-the-web",
       title: "The Language of the Web",
       content: "If HTML is the skeleton and CSS is the clothing, then JavaScript is the brain and muscles. It's what makes a webpage come alive! JavaScript allows you to react to user actions, like clicks and keyboard presses, update content on the page without reloading, and perform complex calculations. It's the engine that powers almost every interactive website you use, from social media feeds to online games.",
       keyTopics: ["What is JavaScript?", "Client-Side vs. Server-Side (Node.js)", "The 'script' tag"],
@@ -30,6 +31,7 @@ document.getElementById('greeting').textContent = 'Hello from JavaScript!';`
       ]
     },
     {
+      id: "javascript-variables-and-data-types",
       title: "Variables and Data Types",
       content: "Imagine you need to store information, like a user's name or the score in a game. You need a container for that data. In JavaScript, these containers are called 'variables'. Variables can hold different types of data, such as numbers (like 10), strings of text (like 'Alice'), booleans (true or false), and more complex types like objects and arrays. Using 'let' and 'const' to declare variables is the modern standard.",
       keyTopics: ["let, const, var", "Strings", "Numbers", "Booleans", "Objects", "Arrays"],
@@ -51,6 +53,7 @@ const inventory = ["ring", "sword", "lembas bread"]; // An array (a list) of ite
       ]
     },
     {
+      id: "javascript-functions",
       title: "Functions: Reusable Blocks of Code",
       content: "Functions are one of the most important building blocks in programming. Think of them as recipes. You define a recipe (the function) once, and then you can use it over and over again just by calling its name. Functions can take inputs (called 'parameters') and can return an output. This helps you organize your code, avoid repetition, and make your programs much more powerful and manageable.",
       keyTopics: ["Function Declaration", "Function Expression", "Arrow Functions", "Parameters and Arguments", "Return values"],
@@ -77,6 +80,7 @@ console.log(sum); // Outputs: 8`
       ]
     },
     {
+      id: "javascript-dom-manipulation",
       title: "DOM Manipulation",
       content: "The DOM (Document Object Model) is a tree-like representation of your HTML page. JavaScript has the power to change this tree. You can find elements, create new ones, remove old ones, and change their styles or content. This is the magic behind interactive web pages! When you click a 'like' button and the count goes up without the page reloading, that's JavaScript manipulating the DOM.",
       keyTopics: ["What is the DOM?", "getElementById", "querySelector", "createElement", "addEventListener"],
@@ -97,6 +101,7 @@ myButton.addEventListener('click', () => {
       ]
     },
     {
+      id: "javascript-asynchronous",
       title: "Asynchronous JavaScript",
       content: "JavaScript can only do one thing at a time. But what if you need to do something that takes a long time, like fetching data from a server across the internet? You don't want your entire webpage to freeze while you wait! Asynchronous JavaScript is the solution. It lets you start a long-running task, and your code can continue doing other things. When the task is finished, your code is notified. 'Promises' and the 'async/await' syntax are the modern tools for handling this.",
       keyTopics: ["The Event Loop", "Callbacks", "Promises (.then, .catch)", "async/await"],

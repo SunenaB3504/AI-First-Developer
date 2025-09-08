@@ -116,12 +116,20 @@
   font-weight: 600;
 }
 
+/* Styles for completed state */
 .path-lesson.completed .node-circle {
-  background-color: #28a745;
+  background-color: #28a745; /* Green for success */
   border-color: #28a745;
 }
 
 .path-lesson.completed .lesson-title {
-  color: #24292e;
+  color: #586069; /* Keep original color but add line-through */
   text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.path-module.completed .module-title span:first-child::after {
+  content: ' ✔';
+  color: #28a745;
+  font-weight: bold;
 }
