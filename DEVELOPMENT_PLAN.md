@@ -71,8 +71,8 @@ This checklist tracks the creation of all required content features for each of 
 | CSS3 | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | JavaScript | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | Browser Dev Tools | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| JSON | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Git | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| JSON | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Git | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | **Tier 2** | | | | | | | | | | |
 | Node.js | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Express.js | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |

@@ -14,23 +14,23 @@ const LessonView = ({ lesson }) => {
     return <div className="lesson-view">Select a lesson to start.</div>;
   }
 
-  // A simple function to replace \n with <br> for rendering
-  const formatContent = (content) => {
-    const sanitizedContent = DOMPurify.sanitize(content.replace(/\n/g, '<br />'));
-    return { __html: sanitizedContent };
+  const sanitize = (html) => {
+    // We allow pre and code tags for code blocks, but sanitize the rest.
+    const sanitized = DOMPurify.sanitize(html, { ADD_TAGS: ['pre', 'code'] });
+    return { __html: sanitized };
   };
 
   return (
     <div className="lesson-view">
-      <h2>{lesson.title}</h2>
+      <h2 dangerouslySetInnerHTML={sanitize(lesson.title)} />
       
-      <div className="lesson-content" dangerouslySetInnerHTML={formatContent(lesson.content)} />
+      <div className="lesson-content" dangerouslySetInnerHTML={sanitize(lesson.content.replace(/\n/g, '<br />'))} />
 
       {lesson.keyTopics && lesson.keyTopics.length > 0 && (
         <div className="key-topics">
           <h3>Key Topics</h3>
           <ul>
-            {lesson.keyTopics.map(topic => <li key={topic}>{topic}</li>)}
+            {lesson.keyTopics.map(topic => <li key={topic} dangerouslySetInnerHTML={sanitize(topic)} />)}
           </ul>
         </div>
       )}
@@ -40,7 +40,7 @@ const LessonView = ({ lesson }) => {
           <h3>Code Examples</h3>
           {lesson.codeExamples.map((example, index) => (
             <div key={index} className="code-example">
-              <h4>{example.title}</h4>
+              <h4 dangerouslySetInnerHTML={sanitize(example.title)} />
               <pre className="code-block">
                 <code>{example.code}</code>
               </pre>

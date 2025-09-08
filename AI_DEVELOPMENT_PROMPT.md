@@ -113,7 +113,7 @@ Create an interactive learning platform that guides users through a structured 2
 - **Header**: Fixed navigation with logo, progress indicator, AI assistant button
 - **Content Area**: Scrollable main content with consistent padding
 - **Navigation**: Bottom tab bar for mobile, a visual learning path for desktop.
-- **Learning Path**: On desktop, the main navigation is a vertically-oriented learning path. It visually represents modules and their lessons as a series of connected nodes, guiding the user through the curriculum in a linear, step-by-step manner.
+- **Learning Path**: On desktop, the main navigation is a vertically-oriented learning path. It visually represents modules and their lessons as a series of connected nodes, guiding the user through the curriculum in a linear, step-by-step manner. Modules are collapsible to provide a cleaner interface.
 - **Footer**: Previous/Next navigation, completion status, bookmark functionality
 
 ### **Interactive Elements:**
@@ -335,7 +335,7 @@ To ensure the learning material is effective and engaging for novices, all gener
 - **Backup Strategy**: Regular data backups with disaster recovery
 
 ### **Content Security:**
-- **HTML Sanitization**: All dynamically rendered HTML content (e.g., from lesson data) must be sanitized using a library like `DOMPurify` to prevent Cross-Site Scripting (XSS) attacks. The use of `dangerouslySetInnerHTML` is only permissible with sanitized content.
+- **Comprehensive HTML Sanitization**: All dynamically rendered HTML content from data modules (including titles, descriptions, topics, etc.) **must** be sanitized using a library like `DOMPurify` before being passed to `dangerouslySetInnerHTML`. This is a zero-tolerance requirement to prevent Cross-Site Scripting (XSS) attacks. Every field rendered this way must be sanitized.
 - **Code Sanitization**: Prevent XSS and injection attacks
 - **API Security**: Rate limiting and authentication for all endpoints
 - **Content Moderation**: AI-powered content filtering for user submissions

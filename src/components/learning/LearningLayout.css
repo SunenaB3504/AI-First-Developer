@@ -1,4 +1,21 @@
 .learning-layout {
-    display: flex;
-  }
+  display: flex;
+  height: calc(100vh - 60px); /* Adjust for header height if any, assuming 60px */
+}
+
+/* Target the LearningPath component */
+.learning-layout > :first-child {
+  flex: 0 0 320px; /* Do not grow, do not shrink, fixed 320px width */
+  overflow-y: auto; /* Allow scrolling within the path itself */
+  height: 100%;
+}
+
+/* Target the LessonView component */
+.learning-layout > :last-child {
+  flex: 1 1 auto; /* Grow to fill remaining space */
+  overflow-y: auto; /* Allow scrolling for the lesson content */
+  padding: 1.5rem;
+  height: 100%;
+}
+
   
