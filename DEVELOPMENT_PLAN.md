@@ -70,7 +70,7 @@ This checklist tracks the creation of all required content features for each of 
 | HTML5 | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | CSS3 | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | JavaScript | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| Browser Dev Tools | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Browser Dev Tools | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | JSON | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Git | 1 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **Tier 2** | | | | | | | | | | |
