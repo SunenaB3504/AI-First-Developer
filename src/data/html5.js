@@ -16,7 +16,7 @@ const html5Content = {
   sections: [
     {
       title: "Introduction to HTML",
-      content: "HTML (Hypertext Markup Language) is the standard language for creating web pages. It provides the structure for the content on a webpage, from headings and paragraphs to images and links. All websites, from the simplest to the most complex, are built on HTML.",
+      content: "Think of HTML as the skeleton of a website. Just like a skeleton gives a body its structure, HTML provides the fundamental structure for every web page. 'Hypertext' refers to the links that connect pages, and 'Markup Language' means you use special tags to tell the browser how to display the content. It’s the very first thing you need to learn in web development.",
       keyTopics: ["What is HTML?", "Basic Document Structure", "Doctype Declaration"],
       codeExamples: [
         {
@@ -36,32 +36,33 @@ const html5Content = {
     },
     {
       title: "Basic Tags & Text Formatting",
-      content: "HTML provides a variety of tags to format text. Headings are defined with <h1> through <h6> tags, paragraphs with <p>, and you can emphasize text with tags like <strong> for bold and <em> for italic.",
+      content: "Think of HTML tags like giving instructions to a very obedient robot (your web browser). You can't just write a sentence and expect it to know it's a headline. You have to wrap it in 'instruction tags' to give it meaning.\n\nFor example, to create a big, important title, you use &lt;h1&gt;. Think of it as telling the robot, 'Make this a top-level headline!' For less important subheadings, you can use &lt;h2&gt;, &lt;h3&gt;, and so on. For any regular paragraph of text, you simply wrap it in &lt;p&gt; tags.\n\nWhat if you want to make a word stand out? To make text bold and show it's important, you use &lt;strong&gt;. To emphasize a word, you can use &lt;em&gt;, which usually makes it italic. It's like adding tone of voice to your text!",
       keyTopics: ["Headings (h1-h6)", "Paragraphs (p)", "Bold (strong)", "Italic (em)", "Line Breaks (br)"],
       codeExamples: [
         {
           title: "Text Formatting",
           code: `<h1>Main Heading</h1>
-<p>This is a paragraph. <strong>This text is important (bold).</strong></p>
-<p>This is another paragraph. <em>This text is emphasized (italic).</em></p>`
+<h2>Sub-heading</h2>
+<p>This is a paragraph. <strong>This text is important (bold).</strong> It is different from <em>emphasized (italic) text.</em></p>
+<p>You can also<br>add a line break.</p>`
         }
       ]
     },
     {
       title: "Links and Images",
-      content: "Links (or hyperlinks) are fundamental to the web, allowing users to navigate between pages. They are created with the <a> (anchor) tag. Images are embedded using the <img> tag, which requires a 'src' attribute for the image source and an 'alt' attribute for accessibility.",
+      content: "What makes the web 'the web'? Links! A link, or hyperlink, lets you connect your page to another. You create one with the &lt;a&gt; (anchor) tag. The 'href' attribute holds the destination URL, like a street address for your link.\n\nTo make your page more visual, you use the &lt;img&gt; tag to add pictures. This tag needs two things: a 'src' (source) attribute to tell it where to find the image, and an 'alt' (alternative) attribute. The 'alt' text is super important—it describes the image for visually impaired users and also shows up if the image can't load.",
       keyTopics: ["Anchor Tag (a)", "Image Tag (img)", "href attribute", "src attribute", "alt attribute"],
       codeExamples: [
         {
           title: "Creating a Link and Embedding an Image",
-          code: `<p>Visit our <a href="https://www.example.com">official website</a>.</p>
-<img src="image.jpg" alt="A descriptive caption for the image">`
+          code: `<p>Visit our <a href="https://www.example.com" target="_blank">official website</a> in a new tab.</p>
+<img src="images/logo.png" alt="The company logo, a blue bird flying.">`
         }
       ]
     },
     {
       title: "Lists",
-      content: "HTML offers two main types of lists: unordered lists (<ul>) for bullet points and ordered lists (<ol>) for numbered items. Each item within a list is defined with a <li> (list item) tag.",
+      content: "Sometimes you need to organize information into a list. HTML gives you two options. If the order doesn't matter, like a grocery list, you use an unordered list (&lt;ul&gt;) to get bullet points. If the order is crucial, like step-by-step instructions, you use an ordered list (&lt;ol&gt;) to get numbers. Either way, each item in the list gets its own &lt;li&gt; (list item) tag.",
       keyTopics: ["Unordered Lists (ul)", "Ordered Lists (ol)", "List Items (li)"],
       codeExamples: [
         {
@@ -75,16 +76,16 @@ const html5Content = {
 
 <h4>Instructions</h4>
 <ol>
-  <li>First, do this.</li>
-  <li>Then, do that.</li>
-  <li>Finally, do this.</li>
+  <li>First, preheat the oven.</li>
+  <li>Next, mix the ingredients.</li>
+  <li>Finally, bake for 20 minutes.</li>
 </ol>`
         }
       ]
     },
     {
       title: "Tables",
-      content: "Tables are used to display data in rows and columns. A table is defined with the <table> tag, with <tr> for table rows, <th> for table headers, and <td> for table data cells.",
+      content: "When you have data that belongs in a grid, like a price list or a schedule, tables are the perfect tool. You start with a &lt;table&gt; tag. Inside, you build the table row by row with &lt;tr&gt; (table row) tags. For the column titles, you use &lt;th&gt; (table header) to make them stand out. For all the regular data cells, you use &lt;td&gt; (table data). A quick warning: only use tables for data, not for laying out your whole page!",
       keyTopics: ["<table>", "<tr>", "<th>", "<td>", "Table Headers"],
       codeExamples: [
         {
@@ -93,14 +94,17 @@ const html5Content = {
   <tr>
     <th>Firstname</th>
     <th>Lastname</th>
+    <th>Age</th>
   </tr>
   <tr>
     <td>John</td>
     <td>Doe</td>
+    <td>30</td>
   </tr>
   <tr>
     <td>Jane</td>
     <td>Smith</td>
+    <td>25</td>
   </tr>
 </table>`
         }
@@ -108,16 +112,20 @@ const html5Content = {
     },
     {
       title: "Forms and User Input",
-      content: "HTML forms are used to collect user input. The <form> element is a container for different types of input elements, such as text fields, checkboxes, radio buttons, submit buttons, and more. The <label> tag is crucial for accessibility.",
+      content: "Forms are how you let users talk back to your website—whether it's a search bar, a login page, or a contact form. You start with a &lt;form&gt; tag, which acts as a container. Inside, the &lt;input&gt; tag is your best friend. By changing its 'type' attribute, it can become a text box, a password field, a checkbox, or a radio button. To make your forms accessible, always pair your inputs with a &lt;label&gt; tag. It tells users exactly what information you're asking for.",
       keyTopics: ["<form>", "<input>", "<textarea>", "<label>", "<button>", "Input Types"],
       codeExamples: [
         {
           title: "Simple Login Form",
-          code: `<form action="/login" method="post">
-  <label for="username">Username:</label><br>
-  <input type="text" id="username" name="username"><br>
-  <label for="password">Password:</label><br>
-  <input type="password" id="password" name="password"><br><br>
+          code: `<form action="/submit-data" method="post">
+  <div>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+  </div>
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password">
+  </div>
   <button type="submit">Submit</button>
 </form>`
         }
@@ -125,13 +133,13 @@ const html5Content = {
     },
     {
       title: "Semantic HTML5 Elements",
-      content: "Semantic HTML elements clearly describe their meaning in a human- and machine-readable way. They help search engines and other user devices to determine the importance and context of web pages. Using them improves SEO and accessibility.",
+      content: "Imagine building a house with only one type of brick for everything—walls, floors, and the roof. It would be a confusing mess! Early websites were often built like that, using a generic &lt;div&gt; tag for everything.\n\nSemantic HTML is like having specialized bricks: &lt;header&gt; for the top of your page, &lt;footer&gt; for the bottom, &lt;nav&gt; for your navigation links, and &lt;main&gt; for your primary content. These tags don't just change how things look; they give *meaning* to your content. This is incredibly helpful for search engines like Google to understand your site and for assistive technologies like screen readers to help visually impaired users navigate. It makes your website smarter and more accessible for everyone.",
       keyTopics: ["<header>", "<footer>", "<nav>", "<main>", "<article>", "<section>", "<aside>"],
       codeExamples: [
         {
           title: "Semantic Page Layout",
           code: `<header>
-  <h1>Website Title</h1>
+  <h1>My Awesome Blog</h1>
   <nav>
     <a href="/home">Home</a>
     <a href="/about">About</a>
@@ -139,19 +147,19 @@ const html5Content = {
 </header>
 <main>
   <article>
-    <h2>Article Title</h2>
-    <p>Article content...</p>
+    <h2>My First Post</h2>
+    <p>This is the content of my first blog post.</p>
   </article>
 </main>
 <footer>
-  <p>&copy; 2025 My Website</p>
+  <p>Copyright &copy; 2025</p>
 </footer>`
         }
       ]
     },
     {
       title: "Multimedia in HTML",
-      content: "HTML5 introduced native support for embedding audio and video without needing external plugins like Flash. The <audio> and <video> tags allow you to easily add media to your pages.",
+      content: "With HTML5, adding media became incredibly simple. You no longer need clunky plugins to play sounds or videos. Just use the &lt;audio&gt; or &lt;video&gt; tag. If you add the 'controls' attribute, the browser will automatically show a play/pause button, a volume slider, and more. You can even provide multiple file formats using the &lt;source&gt; tag, so if a user's browser can't play one type, it has a fallback option.",
       keyTopics: ["<audio>", "<video>", "controls attribute", "source tag"],
       codeExamples: [
         {
@@ -159,12 +167,14 @@ const html5Content = {
           code: `<h4>Audio Player</h4>
 <audio controls>
   <source src="sound.mp3" type="audio/mpeg">
+  <source src="sound.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <h4>Video Player</h4>
 <video width="320" height="240" controls>
   <source src="movie.mp4" type="video/mp4">
+  <source src="movie.webm" type="video/webm">
   Your browser does not support the video tag.
 </video>`
         }
@@ -188,7 +198,7 @@ const html5Content = {
   ],
   commonPitfalls: [
     "Forgetting to close tags, which can lead to unexpected layout issues.",
-    "Using non-semantic tags like <div> for everything.",
+    "Using non-semantic tags like &lt;div&gt; for everything.",
     "Not using the 'label' element for form inputs, which hurts accessibility."
   ],
   careerRelevance: "HTML is the foundational skill for all web development roles. Mastery of HTML is essential for front-end developers, back-end developers, and full-stack developers."

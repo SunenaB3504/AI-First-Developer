@@ -295,6 +295,25 @@ Create an interactive learning platform that guides users through a structured 2
 }
 ```
 
+### **Content Generation Guidelines**
+
+To ensure the learning material is effective and engaging for novices, all generated content must adhere to the following principles:
+
+1.  **Engaging and Relatable Tone:**
+    - **Use Analogies:** Explain complex technical concepts using simple, real-world analogies (e.g., "HTML is the skeleton of a website").
+    - **Conversational Style:** Write in a friendly, encouraging, and conversational voice. Avoid overly academic or dry language.
+
+2.  **Focus on the "Why":**
+    - **Explain Purpose:** Don't just describe *what* a feature does; explain *why* it's useful and *when* a developer would need it.
+    - **Contextual Examples:** Provide practical examples that connect to a real-world problem the learner might want to solve.
+
+3.  **Technical Accuracy and Readability:**
+    - **Escape Inline HTML:** When displaying HTML tags as text within a content description (e.g., explaining what a `<p>` tag is), they **must** be properly escaped (e.g., `&lt;p&gt;`). This prevents the browser from rendering the tag and breaking the UI.
+    - **Clear Code Snippets:** Code examples should be concise, well-commented, and directly relevant to the concept being taught.
+
+4.  **Logical Progression:**
+    - **Build on Concepts:** Structure sections so that they build upon one another, creating a smooth learning curve from basic to advanced topics.
+
 ---
 
 ## 🔒 **Security & Privacy Requirements**
