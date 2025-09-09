@@ -24,7 +24,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
     *   [In Progress] **Content**: Develop and integrate all content for Tier 1 technologies (HTML done).
     *   **Features**:
         *   [x] Create the interactive tutorial and lesson interface.
-        *   [ ] Integrate the basic AI prompt system for personalized guidance.
+        *   [x] Integrate the basic AI prompt system for personalized guidance.
         *   [x] Implement the progress tracking UI (progress bars, chapter completion status).
 
 #### **Phase 3: Advanced Features & Content Expansion (Weeks 9-12)**

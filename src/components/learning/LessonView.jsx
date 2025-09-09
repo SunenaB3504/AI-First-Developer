@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import DOMPurify from 'dompurify';
 import './LessonView.css';
+import AIPrompt from '../ai/AIPrompt';
 
 /**
  * LessonView component to display lesson content.
@@ -9,7 +10,7 @@ import './LessonView.css';
  * @param {object} props.lesson - The lesson to display.
  * @returns {JSX.Element} The rendered component.
  */
-const LessonView = ({ lesson }) => {
+const LessonView = ({ lesson, aiPrompts }) => {
   if (!lesson) {
     return <div className="lesson-view">Select a lesson to start.</div>;
   }
@@ -30,7 +31,7 @@ const LessonView = ({ lesson }) => {
         <div className="key-topics">
           <h3>Key Topics</h3>
           <ul>
-            {lesson.keyTopics.map(topic => <li key={topic} dangerouslySetInnerHTML={sanitize(topic)} />)}
+            {lesson.keyTopics.map(topic => <li key={topic}>{topic}</li>)}
           </ul>
         </div>
       )}
@@ -48,12 +49,17 @@ const LessonView = ({ lesson }) => {
           ))}
         </div>
       )}
+
+      {aiPrompts && aiPrompts.length > 0 && (
+        <AIPrompt prompts={aiPrompts} />
+      )}
     </div>
   );
 };
 
 LessonView.propTypes = {
     lesson: PropTypes.object,
+    aiPrompts: PropTypes.array,
 };
 
 export default LessonView;

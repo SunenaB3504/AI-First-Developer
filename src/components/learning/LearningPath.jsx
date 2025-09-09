@@ -8,11 +8,11 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
   const { completedLessons, markLessonCompleted } = useProgress();
   const selectedLessonRef = useRef(null);
 
-  const handleLessonClick = (lesson, lessonId) => {
-    onLessonClick(lesson);
+  const handleLessonClick = (lesson, module) => {
+    onLessonClick(lesson, module);
     // Automatically mark lesson as completed when clicked
     // In a real app, you might do this when a "Next" button is clicked or after a quiz
-    markLessonCompleted(lessonId);
+    markLessonCompleted(lesson.id);
   };
 
   const toggleModule = (moduleId) => {
@@ -66,7 +66,7 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
                     <li
                       key={lesson.title}
                       className={lessonClass}
-                      onClick={() => handleLessonClick(lesson, lesson.id)}
+                      onClick={() => handleLessonClick(lesson, module)}
                       ref={isSelected ? selectedLessonRef : null}
                     >
                       <div className="lesson-node">

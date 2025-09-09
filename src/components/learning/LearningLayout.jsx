@@ -10,11 +10,17 @@ import './LearningLayout.css';
  */
 const LearningLayout = () => {
   const [selectedLesson, setSelectedLesson] = useState(null);
+  const [selectedModule, setSelectedModule] = useState(null);
+
+  const handleLessonClick = (lesson, module) => {
+    setSelectedLesson(lesson);
+    setSelectedModule(module);
+  };
 
   return (
     <div className="learning-layout">
-      <LearningPath modules={modules} onLessonClick={setSelectedLesson} selectedLesson={selectedLesson} />
-      <LessonView lesson={selectedLesson} />
+      <LearningPath modules={modules} onLessonClick={handleLessonClick} selectedLesson={selectedLesson} />
+      <LessonView lesson={selectedLesson} aiPrompts={selectedModule?.aiPrompts} />
     </div>
   );
 };
