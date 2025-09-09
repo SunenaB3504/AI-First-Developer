@@ -1,0 +1,208 @@
+# AI Content Generation Prompt for Tier 4 &amp; Tier 5 Topics
+
+## **EXECUTION REQUIREMENTS**
+
+You are an expert AI content generator for the AI-First Developer platform. Your task is to generate comprehensive, high-quality content for the remaining Tier 4 and Tier 5 topics with **ABSOLUTE adherence** to the established documentation standards and patterns.
+
+## **CONTENT SCOPE**
+
+### **Tier 4 - Remaining Topic:**
+- **Monitoring** (New module to be created)
+
+### **Tier 5 - All Topics:**
+- **React Native** (New module to be created)
+- **Flutter** (New module to be created)
+- **Swift** (New module to be created)
+- **Kotlin** (New module to be created)
+
+## **CONTENT STRUCTURE REQUIREMENTS**
+
+Each module MUST follow the EXACT structure and format of existing modules (typescript.js, docker.js, cloudservices.js, cicd.js). The structure includes:
+
+### **Required Properties:**
+```javascript
+export default {
+  id: "unique-module-id",
+  tier: 4, // or 5
+  name: "Technology Name",
+  description: "Comprehensive description...",
+  difficulty: "beginner|intermediate|advanced",
+  estimatedHours: XX,
+  prerequisites: ["array", "of", "prereq", "ids"],
+  learningObjectives: [
+    "Detailed learning objective 1",
+    "Detailed learning objective 2",
+    // ... comprehensive list
+  ],
+  sections: [
+    {
+      title: "Section Title",
+      content: "Detailed content...",
+      keyTopics: ["topic1", "topic2"],
+      practicalExercises: ["exercise1", "exercise2"],
+      codeExamples: [
+        {
+          title: "Example Title",
+          language: "language",
+          code: `// code here`
+        }
+      ]
+    }
+  ],
+  projects: [
+    {
+      title: "Project Title",
+      description: "Project description...",
+      technologies: ["tech1", "tech2"],
+      difficulty: "beginner|intermediate|advanced",
+      estimatedHours: XX,
+      deliverables: ["deliverable1", "deliverable2"]
+    }
+  ],
+  assessments: {
+    quiz: [
+      {
+        question: "Question text?",
+        options: ["option1", "option2", "option3", "option4"],
+        correctAnswer: 0,
+        explanation: "Explanation text..."
+      }
+    ],
+    evaluation: [
+      {
+        question: "Design/architecture question...",
+        rubric: ["criterion1", "criterion2"]
+      }
+    ]
+  },
+  aiPrompts: [
+    "Specific AI prompt 1",
+    "Specific AI prompt 2"
+  ],
+  resources: [
+    {
+      title: "Resource Title",
+      type: "Official Documentation|Guide|Video|Book",
+      url: "https://example.com",
+      description: "Resource description..."
+    }
+  ],
+  toolsRequired: [
+    {
+      name: "Tool Name",
+      description: "Tool description...",
+      installation: "Installation instructions...",
+      purpose: "Tool purpose..."
+    }
+  ],
+  bestPractices: [
+    "Best practice 1",
+    "Best practice 2"
+  ],
+  commonPitfalls: [
+    "Common pitfall 1",
+    "Common pitfall 2"
+  ],
+  careerRelevance: [
+    "Career relevance point 1",
+    "Career relevance point 2"
+  ]
+};
+```
+
+## **CONTENT QUALITY STANDARDS**
+
+### **1. Technical Accuracy**
+- All code examples MUST be syntactically correct and runnable
+- All concepts MUST be explained with technical precision
+- All prerequisites MUST be accurately identified
+- All learning objectives MUST be measurable and specific
+
+### **2. Educational Value**
+- Content MUST progress from basic to advanced concepts
+- Practical exercises MUST be realistic and achievable
+- Code examples MUST demonstrate best practices
+- Projects MUST be comprehensive and portfolio-worthy
+
+### **3. Documentation Adherence**
+- Follow EXACT same structure as existing modules
+- Use consistent naming conventions
+- Include all required properties
+- Maintain consistent formatting and style
+
+## **EXECUTION WORKFLOW**
+
+### **Phase 1: Content Generation**
+For each topic, generate complete module content following the exact structure above.
+
+### **Phase 2: Quality Assurance**
+1. **Syntax Validation**: Ensure all JavaScript syntax is correct
+2. **Content Validation**: Verify all required properties are present
+3. **Cross-Reference Check**: Ensure prerequisites reference existing modules
+4. **DOMPurify Check**: Run DOMPurify on all content strings
+
+### **Phase 3: Integration**
+1. Create new module file in `src/data/` directory
+2. Update `src/data/lessons.js` to import and include the new module
+3. Update DEVELOPMENT_PLAN.md to mark content as complete
+
+### **Phase 4: Final Verification**
+1. Run application to ensure no JavaScript errors
+2. Verify content renders correctly in the UI
+3. Confirm all links and resources are accessible
+4. Run final DOMPurify validation
+
+## **MODULE-SPECIFIC REQUIREMENTS**
+
+### **Monitoring (Tier 4)**
+- Focus on application and infrastructure monitoring
+- Include metrics, logging, alerting, and observability
+- Cover tools like Prometheus, Grafana, ELK stack
+- Include performance monitoring and error tracking
+
+### **React Native (Tier 5)**
+- Prerequisites: React, JavaScript, mobile development concepts
+- Cover iOS and Android development
+- Include navigation, state management, native modules
+- Focus on cross-platform development best practices
+
+### **Flutter (Tier 5)**
+- Prerequisites: Dart programming, mobile development concepts
+- Cover Material Design and Cupertino widgets
+- Include state management, navigation, platform channels
+- Focus on Dart language features and Flutter ecosystem
+
+### **Swift (Tier 5)**
+- Prerequisites: iOS development, programming fundamentals
+- Cover Swift language features, UIKit/SwiftUI
+- Include iOS frameworks, app architecture patterns
+- Focus on native iOS development best practices
+
+### **Kotlin (Tier 5)**
+- Prerequisites: Android development, Java programming
+- Cover Kotlin language features, Android Jetpack
+- Include modern Android development patterns
+- Focus on Kotlin/Android interoperability
+
+## **DELIVERABLES**
+
+1. **Complete Module Files**: 5 new module files in `src/data/`
+2. **Updated lessons.js**: Import and include all new modules
+3. **Updated DEVELOPMENT_PLAN.md**: Mark all Tier 4 &amp; 5 content as complete
+4. **Quality Assurance Report**: Document all validation steps performed
+5. **DOMPurify Validation Results**: Confirm all content passes sanitization
+
+## **SUCCESS CRITERIA**
+
+- [ ] All 5 modules created with complete content
+- [ ] Zero JavaScript syntax errors
+- [ ] All content passes DOMPurify validation
+- [ ] Application runs without errors
+- [ ] DEVELOPMENT_PLAN.md updated with completion status
+- [ ] All cross-references and prerequisites validated
+- [ ] Content follows established patterns and quality standards
+
+---
+
+**EXECUTION COMMAND**: Generate content for all remaining Tier 4 &amp; Tier 5 topics following this specification exactly.
+c:\Users\Admin\Sunil\AI-First-Developer\T45

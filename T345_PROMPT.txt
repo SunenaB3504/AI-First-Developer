@@ -1,0 +1,301 @@
+# T345-Rest Content Generation Prompt
+
+You are an expert AI content generator tasked with creating comprehensive learning content for advanced technologies across Tiers 3, 4, and 5. Follow these requirements exactly:
+
+## EXECUTION REQUIREMENTS
+
+### 1. Complete Documentation Adherence
+- Follow the established JSON schema exactly as defined in existing modules
+- Maintain consistency with Tier 1 and Tier 2 content structure
+- Include ALL required fields without exception
+- Preserve naming conventions and file structure
+
+### 2. Post-Execution Updates (MANDATORY)
+After generating each technology module, you MUST:
+- Update `DEVELOPMENT_PLAN.md` checklist
+- Mark ALL columns as completed: `[x]`
+- Update `src/data/lessons.js` with proper imports
+- Run comprehensive validation checks
+- Execute DOMPurify validation
+- Perform final document adherence verification
+
+### 3. Content Structure Requirements
+Each technology module MUST include:
+- **id**: Technology identifier (lowercase, no spaces)
+- **tier**: Numeric tier (3, 4, or 5)
+- **name**: Technology name
+- **description**: Comprehensive description (2-3 sentences)
+- **difficulty**: "intermediate" or "advanced"
+- **estimatedHours**: Realistic completion time (12-25 hours)
+- **prerequisites**: Array of required technology IDs
+- **learningObjectives**: 8-12 specific, measurable objectives
+- **sections**: 4-8 detailed sections with content, keyTopics, practicalExercises, codeExamples
+- **projects**: 3-5 practical project ideas
+- **assessments**: Quiz and evaluation questions
+- **aiPrompts**: 8-12 common user questions
+- **resources**: Curated learning resources
+- **toolsRequired**: Development tools and software
+- **bestPractices**: Industry-standard practices
+- **commonPitfalls**: Common mistakes to avoid
+- **careerRelevance**: Job market and career impact
+
+## TIER 3 TECHNOLOGIES
+
+### React
+**Focus**: Modern React patterns, hooks, state management, performance optimization
+**Prerequisites**: javascript, html5, css3
+**Key Areas**:
+- Component architecture and lifecycle
+- Hooks (useState, useEffect, useContext, custom hooks)
+- State management (Context API, Redux, Zustand)
+- Performance optimization (memo, useMemo, useCallback)
+- Testing React components
+- Advanced patterns (HOC, render props, compound components)
+
+### Firebase
+**Focus**: Backend-as-a-Service platform integration
+**Prerequisites**: javascript, authentication
+**Key Areas**:
+- Firestore database operations
+- Firebase Authentication (email, social, anonymous)
+- Cloud Storage for file uploads
+- Cloud Functions for serverless computing
+- Firebase Hosting deployment
+- Security rules and data validation
+- Real-time listeners and offline support
+
+### MongoDB
+**Focus**: NoSQL document database design and operations
+**Prerequisites**: nodejs, json
+**Key Areas**:
+- Document modeling and schema design
+- CRUD operations with MongoDB drivers
+- Aggregation framework and pipelines
+- Indexing strategies for performance
+- Data relationships and referencing
+- MongoDB Atlas cloud deployment
+- Backup and recovery strategies
+
+### Authentication
+**Focus**: User authentication and authorization systems
+**Prerequisites**: nodejs, security
+**Key Areas**:
+- JWT token implementation
+- OAuth 2.0 and OpenID Connect
+- Session management strategies
+- Password hashing and security
+- Multi-factor authentication
+- Role-based access control (RBAC)
+- Security best practices and vulnerabilities
+
+### Testing
+**Focus**: Comprehensive testing strategies for web applications
+**Prerequisites**: javascript, nodejs
+**Key Areas**:
+- Unit testing with Jest
+- Integration testing patterns
+- End-to-end testing with Cypress/Playwright
+- Test-driven development (TDD)
+- Mocking and stubbing techniques
+- Code coverage and reporting
+- Continuous integration testing
+
+## TIER 4 TECHNOLOGIES
+
+### TypeScript
+**Focus**: Typed JavaScript for scalable applications
+**Prerequisites**: javascript, nodejs
+**Key Areas**:
+- Type system fundamentals
+- Interfaces and type definitions
+- Generics and advanced types
+- Configuration and compiler options
+- Integration with popular frameworks
+- Migration strategies from JavaScript
+- Type-safe API development
+
+### Docker
+**Focus**: Containerization for application deployment
+**Prerequisites**: nodejs, linux
+**Key Areas**:
+- Docker fundamentals and architecture
+- Dockerfile creation and optimization
+- Docker Compose for multi-container apps
+- Volume management and data persistence
+- Networking and service discovery
+- Multi-stage builds for optimization
+- Docker security best practices
+
+### Cloud Services
+**Focus**: Cloud computing platforms and serverless architecture
+**Prerequisites**: docker, monitoring
+**Key Areas**:
+- AWS/GCP/Azure core services
+- Serverless computing (Lambda, Cloud Functions)
+- Cloud storage and databases
+- CDN and edge computing
+- Microservices architecture
+- Infrastructure as Code (IaC)
+- Cost optimization strategies
+
+### CI/CD
+**Focus**: Continuous Integration and Deployment pipelines
+**Prerequisites**: git, docker, testing
+**Key Areas**:
+- GitHub Actions and GitLab CI
+- Pipeline design and automation
+- Automated testing integration
+- Deployment strategies (blue-green, canary)
+- Environment management
+- Artifact management and versioning
+- Security scanning integration
+
+### Monitoring
+**Focus**: Application monitoring and observability
+**Prerequisites**: nodejs, cloud-services
+**Key Areas**:
+- Logging strategies and aggregation
+- Metrics collection and visualization
+- Alerting and notification systems
+- Application Performance Monitoring (APM)
+- Error tracking and debugging
+- Performance optimization
+- Dashboard creation and reporting
+
+## TIER 5 TECHNOLOGIES
+
+### React Native
+**Focus**: Cross-platform mobile development with React
+**Prerequisites**: react, javascript, mobile-development
+**Key Areas**:
+- React Native fundamentals
+- Native component usage
+- Navigation patterns
+- Platform-specific code
+- Device API integration
+- App store deployment
+- Performance optimization
+
+### Flutter
+**Focus**: Google's UI toolkit for cross-platform development
+**Prerequisites**: dart, mobile-development
+**Key Areas**:
+- Flutter widget system
+- State management solutions
+- Platform channel communication
+- Custom widget development
+- App architecture patterns
+- Testing Flutter applications
+- Deployment to app stores
+
+### Swift
+**Focus**: Apple's programming language for iOS/macOS
+**Prerequisites**: ios-development, objective-c
+**Key Areas**:
+- Swift language fundamentals
+- iOS framework integration
+- Memory management (ARC)
+- App architecture patterns
+- SwiftUI for declarative UI
+- Core Data for persistence
+- App store submission process
+
+### Kotlin
+**Focus**: Modern language for Android development
+**Prerequisites**: java, android-development
+**Key Areas**:
+- Kotlin syntax and features
+- Android framework integration
+- Coroutines for asynchronous programming
+- Architecture components
+- Jetpack libraries usage
+- Testing Android applications
+- Google Play Store deployment
+
+## CONTENT GENERATION GUIDELINES
+
+### Section Structure
+Each section MUST include:
+1. **title**: Clear, descriptive section title
+2. **content**: Comprehensive explanation (500-1000 words)
+3. **keyTopics**: Array of 4-6 key learning topics
+4. **practicalExercises**: Array of 3-5 hands-on exercises
+5. **codeExamples**: Array of 2-4 working code examples
+
+### Code Examples Requirements
+- **Functionality**: All code must be working and executable
+- **Comments**: Include clear comments explaining complex logic
+- **Error Handling**: Demonstrate proper error handling
+- **Best Practices**: Follow industry standards
+- **Real-world**: Include practical, applicable examples
+
+### Assessment Structure
+**Quiz Assessment**:
+- 5 multiple-choice questions
+- Clear correct answers
+- Explanatory feedback for each option
+
+**Evaluation Assessment**:
+- 2-3 scenario-based questions
+- Require detailed, thoughtful responses
+- Test practical application of concepts
+
+## VALIDATION AND QUALITY ASSURANCE
+
+### Pre-Generation Checklist
+- [ ] Review technology prerequisites
+- [ ] Check existing content for conflicts
+- [ ] Verify current technology versions
+- [ ] Ensure resource availability
+
+### Post-Generation Validation
+- [ ] JSON schema compliance
+- [ ] All required fields present
+- [ ] Content depth and accuracy
+- [ ] Code example functionality
+- [ ] DOMPurify security validation
+- [ ] Integration testing
+
+### Documentation Updates
+After each technology completion:
+1. Update `DEVELOPMENT_PLAN.md` checklist
+2. Mark technology as completed: `[x] [x] [x] [x] [x] [x] [x] [x] [x] [x]`
+3. Update `src/data/lessons.js` imports
+4. Run validation commands
+5. Commit changes with descriptive message
+
+## EXECUTION WORKFLOW
+
+1. **Select Technology**: Choose from Tiers 3, 4, or 5
+2. **Generate Content**: Create comprehensive module following schema
+3. **Create File**: Save as `src/data/{technology}.js`
+4. **Update Imports**: Add to `src/data/lessons.js`
+5. **Update Documentation**: Mark as completed in `DEVELOPMENT_PLAN.md`
+6. **Run Validation**: Execute DOMPurify and integration tests
+7. **Final Verification**: Confirm document adherence
+8. **Commit Changes**: Save progress to version control
+
+## SUCCESS METRICS
+
+### Content Quality
+- Comprehensive technology coverage
+- Practical, industry-relevant examples
+- Progressive difficulty progression
+- Clear learning outcomes
+- Current best practices
+
+### Technical Accuracy
+- Up-to-date technology information
+- Correct syntax and patterns
+- Proper error handling
+- Performance considerations
+- Security best practices
+
+### Integration Success
+- Seamless platform integration
+- Proper navigation functionality
+- Consistent user experience
+- No breaking changes
+- Comprehensive testing validation
+
+This prompt ensures systematic, high-quality content generation across all advanced technology tiers with complete adherence to documentation standards and rigorous validation processes.

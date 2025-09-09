@@ -12,6 +12,15 @@ import expressjsContent from './expressjs.js';
 import sqliteContent from './sqlite.js';
 import restApisContent from './restapis.js';
 import responsiveDesignContent from './responsivedesign.js';
+import reactContent from './react.js';
+import firebaseContent from './firebase.js';
+import mongodbContent from './mongodb.js';
+import authenticationContent from './authentication.js';
+import testingContent from './testing.js';
+import typescriptContent from './typescript.js';
+import dockerContent from './docker.js';
+import cloudservicesContent from './cloudservices.js';
+import cicdContent from './cicd.js';
 
 export const modules = [
   html5Content,
@@ -25,4 +34,13 @@ export const modules = [
   sqliteContent,
   restApisContent,
   responsiveDesignContent,
+  reactContent,
+  firebaseContent,
+  mongodbContent,
+  authenticationContent,
+  testingContent,
+  typescriptContent,
+  dockerContent,
+  cloudservicesContent,
+  cicdContent,
 ];

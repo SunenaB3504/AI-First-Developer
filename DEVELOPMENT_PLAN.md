@@ -86,16 +86,16 @@ This checklist tracks the creation of all required content features for each of 
 | REST APIs | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | Responsive Design | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | **Tier 3** | | | | | | | | | | |
-| React | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Firebase | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| MongoDB | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Authentication | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Testing | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| React | 3 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Firebase | 3 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| MongoDB | 3 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Authentication | 3 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Testing | 3 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | **Tier 4** | | | | | | | | | | |
-| TypeScript | 4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Docker | 4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Cloud Services | 4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| CI/CD | 4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| TypeScript | 4 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Docker | 4 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Cloud Services | 4 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| CI/CD | 4 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | Monitoring | 4 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | **Tier 5** | | | | | | | | | | |
 | React Native | 5 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
