@@ -5,6 +5,7 @@ import AuthPage from './pages/AuthPage';
 import LearningLayout from './components/learning/LearningLayout';
 import PortfolioPage from './pages/PortfolioPage';
 import ProfilePage from './pages/ProfilePage';
+import AnalyticsDashboardPage from './pages/AnalyticsDashboardPage';
 import { ProgressProvider } from './context/ProgressContext';
 import './App.css';
 
@@ -17,6 +18,7 @@ const AppRoutes = () => {
       <Route path="/" element={currentUser ? <LearningLayout /> : <Navigate to="/auth" />} />
       <Route path="/portfolio" element={currentUser ? <PortfolioPage /> : <Navigate to="/auth" />} />
       <Route path="/profile" element={currentUser ? <ProfilePage /> : <Navigate to="/auth" />} />
+      <Route path="/analytics" element={currentUser ? <AnalyticsDashboardPage /> : <Navigate to="/auth" />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );

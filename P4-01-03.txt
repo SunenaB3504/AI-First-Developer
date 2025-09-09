@@ -1,0 +1,61 @@
+**Objective:** Implement advanced analytics and monitoring dashboards to provide users and administrators with insights into platform usage, user progress, and system performance.
+
+**Tasks:**
+
+1.  **Backend Setup (Firestore/Analytics):**
+    *   Define Firestore collections for storing analytics data such as user activity logs, lesson completion metrics, and system performance indicators.
+    *   Set up data aggregation structures for tracking daily/weekly/monthly statistics.
+
+2.  **Create Analytics Service:**
+    *   Create a new service file `src/services/analyticsService.js`.
+    *   Implement functions to collect, process, and retrieve analytics data:
+        *   `logUserActivity(userId, activityType, metadata)`
+        *   `getUserProgressAnalytics(userId)`
+        *   `getPlatformAnalytics()`
+        *   `getPerformanceMetrics()`
+
+3.  **Develop Analytics Dashboard Components:**
+    *   Create a new folder `src/components/analytics`.
+    *   **`AnalyticsChart.jsx`**: A component for displaying charts (e.g., using a library like Chart.js or Recharts) for user progress, streaks, and badges.
+    *   **`MetricsCard.jsx`**: A component to display key metrics like total users, active users, completion rates.
+    *   **`ActivityLog.jsx`**: A component to show recent user activities and system events.
+
+4.  **Create Analytics Dashboard Page:**
+    *   Create a new page component `src/pages/AnalyticsDashboardPage.jsx`.
+    *   This page will fetch and display analytics data using the `analyticsService` and dashboard components.
+    *   Include filtering options for date ranges and user segments.
+    *   It should be protected and accessible only to administrators or the user viewing their own data.
+
+5.  **Update Routing and Navigation:**
+    *   Add a new route for `/analytics` in `src/App.jsx` that points to the `AnalyticsDashboardPage`.
+    *   Add a link to the "Analytics" page in the main navigation for authorized users.
+
+6.  **Update `DEVELOPMENT_PLAN.md`:**
+    *   After successful implementation, mark the "Implement advanced analytics and monitoring dashboards" task as complete (`[x]`).
+
+7.  **Final Adherence Check:**
+    *   Review all new and modified files to ensure they adhere to project standards, are well-documented, and function correctly.
+
+8.  **Complete Adherence to Documentation:**
+    *   Ensure all new and modified code includes comprehensive comments, JSDoc for functions, and inline explanations where necessary.
+    *   Follow consistent naming conventions, code formatting, and project structure guidelines.
+    *   Document any new APIs, components, or services with clear descriptions of their purpose, parameters, and usage.
+
+9.  **Update DEVELOPMENT_PLAN.md After Each Execution:**
+    *   After completing each task or feature implementation, immediately update `DEVELOPMENT_PLAN.md` to mark the relevant items as complete (`[x]`).
+    *   Add any new tasks or sub-tasks that arise during development.
+    *   Ensure the plan reflects the current progress accurately, including any changes in timelines or priorities.
+
+10. **Run Final Recheck for Document Adherence:**
+    *   Before marking any task as complete, perform a thorough review of all modified files.
+    *   Verify that documentation is complete, code is well-structured, and all standards are met.
+    *   Check for any linting errors, unused imports, or potential security vulnerabilities.
+
+11. **Run DOMPurify:**
+    *   Apply DOMPurify to sanitize all dynamic content before rendering in the application.
+    *   Ensure that any user-generated content, AI responses, or external data is properly sanitized to prevent XSS attacks.
+    *   Integrate DOMPurify into all relevant components and services where HTML content is displayed.
+
+12. **Copy the Prompt to File P4-01-03:**
+    *   Save this prompt to a file named `P4-01-03` for future reference and tracking.
+    *   Ensure the file is stored in the project root directory.

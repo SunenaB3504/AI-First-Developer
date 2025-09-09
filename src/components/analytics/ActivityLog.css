@@ -1,0 +1,42 @@
+.activity-log {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px;
+}
+
+.activity-log h3 {
+  margin-top: 0;
+  color: #212121;
+}
+
+.activity-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.activity-item {
+  padding: 8px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+}
+
+.activity-type {
+  font-weight: bold;
+  color: #2196f3;
+}
+
+.activity-meta {
+  font-size: 12px;
+  color: #757575;
+  margin: 4px 0;
+}
+
+.activity-timestamp {
+  font-size: 11px;
+  color: #9e9e9e;
+}

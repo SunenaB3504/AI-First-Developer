@@ -28,6 +28,7 @@ const Header = () => {
               <Link to="/">Learn</Link>
               <Link to="/portfolio">Portfolio</Link>
               <Link to="/profile">Profile</Link>
+              <Link to="/analytics">Analytics</Link>
               <button onClick={handleLogout} className="logout-button">Logout</button>
             </>
           )}

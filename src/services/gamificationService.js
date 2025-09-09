@@ -3,7 +3,7 @@
  * @description Service for handling gamification features like learning streaks and badges.
  */
 import { db } from '../firebase/config';
-import { doc, getDoc, updateDoc, collection, addDoc, getDocs, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, updateDoc, collection, addDoc, getDocs, serverTimestamp, query, where } from 'firebase/firestore';
 
 /**
  * Updates a user's learning streak based on their activity.
