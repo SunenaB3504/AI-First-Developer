@@ -54,16 +54,13 @@ const LessonView = ({ lesson, aiPrompts }) => {
         </div>
       )}
 
-      {aiPrompts && aiPrompts.length > 0 && (
-        <AIPrompt prompts={aiPrompts} />
-      )}
+      <AIPrompt context={lesson.id} />
     </div>
   );
 };
 
 LessonView.propTypes = {
     lesson: PropTypes.object,
-    aiPrompts: PropTypes.array,
 };
 
 export default LessonView;

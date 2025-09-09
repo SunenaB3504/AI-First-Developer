@@ -3,29 +3,31 @@ import PropTypes from 'prop-types';
 import { getAIResponse } from '../../services/aiService';
 import './AIPrompt.css';
 
-const AIPrompt = ({ prompts }) => {
-  const [isLoading, setIsLoading] = useState(false);
+const AIPrompt = ({ context }) => {
   const [response, setResponse] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handlePromptClick = async (prompt) => {
+  const handleGetTip = async () => {
     setIsLoading(true);
     setResponse('');
-    const aiResponse = await getAIResponse(prompt);
-    setResponse(aiResponse);
-    setIsLoading(false);
+    try {
+      const res = await getAIResponse(context);
+      setResponse(res.text);
+    } catch (error) {
+      console.error("Error fetching AI response:", error);
+      setResponse('Sorry, I could not fetch a tip at the moment.');
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
     <div className="ai-prompt-container">
-      <h3>Ask the AI</h3>
-      <div className="prompt-buttons">
-        {prompts.map((prompt, index) => (
-          <button key={index} onClick={() => handlePromptClick(prompt)} disabled={isLoading}>
-            {prompt}
-          </button>
-        ))}
-      </div>
-      {isLoading && <div className="loading-indicator">Thinking...</div>}
+      <h4>AI Assistant</h4>
+      <p>Need a hint or a deeper explanation? Ask our AI assistant.</p>
+      <button onClick={handleGetTip} disabled={isLoading}>
+        {isLoading ? 'Thinking...' : 'Get an AI Tip'}
+      </button>
       {response && (
         <div className="ai-response">
           <p>{response}</p>
@@ -36,7 +38,7 @@ const AIPrompt = ({ prompts }) => {
 };
 
 AIPrompt.propTypes = {
-  prompts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  context: PropTypes.string,
 };
 
 export default AIPrompt;

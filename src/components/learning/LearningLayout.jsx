@@ -23,7 +23,7 @@ const LearningLayout = () => {
   return (
     <div className="learning-layout">
       <LearningPath modules={modules} onLessonClick={handleLessonClick} selectedLesson={selectedLesson} />
-      <LessonView lesson={selectedLesson} aiPrompts={selectedModule?.aiPrompts} />
+      <LessonView lesson={selectedLesson} />
     </div>
   );
 };
