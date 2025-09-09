@@ -1,29 +1,30 @@
-**Objective:** Implement the Text-to-Speech (TTS) feature for lesson content.
+**Objective:** Implement the Text-to-Speech (TTS) feature for lesson content, ensuring a clean listening experience.
 
 **Tasks:**
 1.  **Integrate a TTS Library:**
-    *   Research and select a suitable and simple client-side TTS library (e.g., the browser's built-in `SpeechSynthesis` API is a good first choice).
-    *   Install any necessary packages if required.
+    *   Utilize the browser's built-in `SpeechSynthesis` API. No external library is needed for this initial implementation.
 
 2.  **Create a TTS Service/Utility:**
     *   Create a new file `src/utils/tts.js`.
     *   This utility will encapsulate the TTS logic, including functions to speak, pause, and cancel speech.
-    *   It should handle the browser's `SpeechSynthesis` API.
 
 3.  **Develop the `TTSButton` Component:**
-    *   Create a new component `src/components/common/TTSButton.jsx`.
+    *   Create a new component `src/components/common/TTSButton.jsx` and a corresponding CSS file for basic styling.
     *   This component will display play/pause/stop buttons.
     *   It will manage the state of the TTS playback (e.g., `isPlaying`, `isPaused`).
-    *   It will take the text to be spoken as a prop.
+    *   It will accept the lesson's title and content as props.
+    *   **Crucially, it will be responsible for preparing the text for speech:**
+        *   Combine the lesson title and content.
+        *   **Strip all HTML tags** from the combined text to create a clean, plain-text string.
+        *   **Explicitly exclude code examples** from the text to be spoken.
 
 4.  **Integrate `TTSButton` into `LessonView`:**
     *   Modify `src/components/learning/LessonView.jsx`.
-    *   Add the `TTSButton` component near the lesson title or content.
-    *   Pass the lesson's content to the `TTSButton`.
-    *   Ensure the TTS functionality works when a lesson is viewed.
+    *   Add the `TTSButton` component near the lesson title.
+    *   Pass the `lesson.title` and `lesson.content` to the `TTSButton`.
 
 5.  **Update `DEVELOPMENT_PLAN.md`:**
-    *   After successful implementation and testing, mark the "Implement Text-to-Speech (TTS) functionality" task as complete.
+    *   After successful implementation, mark the "Implement Text-to-Speech (TTS) functionality" task as complete (`[x]`).
 
 6.  **Final Adherence Check:**
-    *   Review all new and modified files (`tts.js`, `TTSButton.jsx`, `LessonView.jsx`) to ensure they adhere to project standards, are well-documented, and contain no linting errors.
+    *   Review all new and modified files (`tts.js`, `TTSButton.jsx`, `LessonView.jsx`) to ensure they adhere to project standards, are well-documented, and function correctly.

@@ -17,6 +17,17 @@
   margin-bottom: 1.5rem;
 }
 
+.lesson-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.lesson-header h2 {
+  margin-bottom: 0; /* Remove bottom margin from h2 inside header */
+}
+
 .lesson-content {
   margin-bottom: 2rem;
   font-size: 1.1rem;
@@ -85,4 +96,3 @@
   white-space: pre-wrap;
 }
 
-  

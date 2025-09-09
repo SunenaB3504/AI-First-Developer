@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import DOMPurify from 'dompurify';
 import './LessonView.css';
 import AIPrompt from '../ai/AIPrompt';
+import TTSButton from '../common/TTSButton';
 
 /**
  * LessonView component to display lesson content.
@@ -23,7 +24,10 @@ const LessonView = ({ lesson, aiPrompts }) => {
 
   return (
     <div className="lesson-view">
-      <h2 dangerouslySetInnerHTML={sanitize(lesson.title)} />
+      <div className="lesson-header">
+        <h2 dangerouslySetInnerHTML={sanitize(lesson.title)} />
+        <TTSButton title={lesson.title} content={lesson.content} />
+      </div>
       
       <div className="lesson-content" dangerouslySetInnerHTML={sanitize(lesson.content.replace(/\n/g, '<br />'))} />
 

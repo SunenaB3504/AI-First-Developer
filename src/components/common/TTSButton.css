@@ -1,0 +1,20 @@
+.tts-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.tts-button:hover {
+  background-color: #0056b3;
+}
+
+.tts-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
