@@ -1,27 +1,39 @@
-/**
- * @file Header.jsx
- * @description This component renders the main header for the application.
- * It is a fixed navigation bar at the top of the page.
- */
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
+import { auth } from '../../firebase/config';
+import './Header.css';
 
 const Header = () => {
-  const headerStyle = {
-    backgroundColor: '#2196F3',
-    padding: '16px',
-    color: 'white',
-    textAlign: 'center',
-    position: 'fixed',
-    top: 0,
-    width: '100%',
-    zIndex: 1000,
-  }
+  const { currentUser } = useAuth();
+
+  const handleLogout = async () => {
+    try {
+      await auth.signOut();
+      // The onAuthStateChanged listener in AuthContext will handle the state update
+    } catch (error) {
+      console.error("Failed to log out", error);
+    }
+  };
 
   return (
-    <header style={headerStyle}>
-      <h1>Welcome to the Learning Platform</h1>
+    <header className="app-header">
+      <div className="header-content">
+        <Link to="/" className="logo">
+          <h1>AI Learning Platform</h1>
+        </Link>
+        <nav className="main-nav">
+          {currentUser && (
+            <>
+              <Link to="/">Learn</Link>
+              <Link to="/portfolio">Portfolio</Link>
+              <button onClick={handleLogout} className="logout-button">Logout</button>
+            </>
+          )}
+        </nav>
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

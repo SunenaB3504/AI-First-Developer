@@ -34,7 +34,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
     *   [ ] **Content**: Develop and integrate all content for Tier 2 and Tier 3 technologies.
     *   [ ] **Features**:
         *   [x] Implement Text-to-Speech (TTS) functionality for audio learning.
-        *   [ ] Develop the project portfolio builder where users can showcase their work.
+        *   [x] Develop the project portfolio builder where users can showcase their work.
         *   [ ] Enhance the AI system for smarter content and technology recommendations.
         *   [ ] Implement the gamification system (badges, learning streaks).
 

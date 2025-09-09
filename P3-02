@@ -1,0 +1,36 @@
+**Objective:** Develop the project portfolio builder, allowing users to add, display, and manage their personal projects.
+
+**Tasks:**
+
+1.  **Backend Setup (Firestore):**
+    *   Define a Firestore collection structure for storing user projects. A good structure would be a top-level `portfolios` collection where each document ID is a `userId`, containing a subcollection of `projects`.
+    *   Each project document should include fields like `title`, `description`, `imageUrl`, `projectUrl`, and `githubUrl`.
+
+2.  **Create Portfolio Service:**
+    *   Create a new service file `src/services/portfolioService.js`.
+    *   Implement functions to handle CRUD operations for a user's portfolio projects in Firestore:
+        *   `addProject(userId, projectData)`
+        *   `getProjects(userId)`
+        *   `updateProject(userId, projectId, projectData)`
+        *   `deleteProject(userId, projectId)`
+
+3.  **Develop Portfolio Components:**
+    *   Create a new folder `src/components/portfolio`.
+    *   **`ProjectCard.jsx`**: A component to display a single project with its details and links. It should also include buttons for editing and deleting.
+    *   **`ProjectForm.jsx`**: A form component for adding a new project or editing an existing one. It should handle user input for all project fields.
+
+4.  **Create Portfolio Page:**
+    *   Create a new page component `src/pages/PortfolioPage.jsx`.
+    *   This page will fetch and display the user's projects using the `portfolioService` and the `ProjectCard` component.
+    *   It will include the `ProjectForm` to allow users to add new projects.
+    *   It should be protected, meaning only authenticated users can access it.
+
+5.  **Update Routing and Navigation:**
+    *   Add a new route for `/portfolio` in `src/App.jsx` that points to the `PortfolioPage`.
+    *   Add a link to the "Portfolio" page in the main navigation component (e.g., `Header.jsx` or a user dropdown menu) so that logged-in users can easily access it.
+
+6.  **Update `DEVELOPMENT_PLAN.md`:**
+    *   After successful implementation, mark the "Develop the project portfolio builder" task as complete (`[x]`).
+
+7.  **Final Adherence Check:**
+    *   Review all new and modified files to ensure they adhere to project standards, are well-documented, and function correctly.

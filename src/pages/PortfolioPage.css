@@ -1,0 +1,27 @@
+.portfolio-page {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.portfolio-page h1 {
+  font-size: 2.5rem;
+  color: #111827;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.error-message {
+  color: #ef4444;
+  background-color: #fef2f2;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
