@@ -21,6 +21,11 @@ import typescriptContent from './typescript.js';
 import dockerContent from './docker.js';
 import cloudservicesContent from './cloudservices.js';
 import cicdContent from './cicd.js';
+import monitoringContent from './monitoring.js';
+import reactnativeContent from './reactnative.js';
+import flutterContent from './flutter.js';
+import swiftContent from './swift.js';
+import kotlinContent from './kotlin.js';
 
 export const modules = [
   html5Content,
@@ -43,4 +48,9 @@ export const modules = [
   dockerContent,
   cloudservicesContent,
   cicdContent,
+  monitoringContent,
+  reactnativeContent,
+  flutterContent,
+  swiftContent,
+  kotlinContent,
 ];
