@@ -1,0 +1,55 @@
+### **Prompt for AI-First Developer (P3-05)**
+
+**Objective:** Enhance the AI Assistant by implementing a question-and-answer functionality. This will allow users to type their own questions and receive dynamic, context-aware (mocked) responses, which will be securely rendered.
+
+**Guiding Principles:**
+1.  **Complete Adherence to Documentation:** All new and modified code must be fully documented with JSDoc comments.
+2.  **Security First:** All dynamic content from the AI service must be sanitized using `DOMPurify` before being rendered to prevent potential XSS vulnerabilities.
+3.  **Atomic Updates:** Follow all instructions step-by-step. Do not proceed to the next step until the current one is complete and validated.
+
+---
+
+### **Phase 1: UI Enhancement**
+
+1.  **Modify `src/components/ai/AIPrompt.jsx`:**
+    *   Below the existing "Get an AI Tip" button, add a `textarea` element to allow users to type their questions.
+    *   Add a "Submit Question" button next to or below the `textarea`.
+    *   Implement state management for the `textarea`'s value.
+    *   Create a new handler function (`handleQuestionSubmit`) for the "Submit Question" button's `onClick` event.
+
+---
+
+### **Phase 2: Service Layer Enhancement**
+
+1.  **Modify `src/services/aiService.js`:**
+    *   Create a new exported function: `getAIAnswerForQuestion(question)`.
+    *   This function will accept the user's typed `question` as a string.
+    *   Inside the function, implement a keyword-matching system (using `if/else` or a `switch` statement on `question.toLowerCase()`).
+        *   If the question includes "html" or "semantic", return a detailed explanation of semantic HTML.
+        *   If the question includes "css" or "style", return a detailed explanation of CSS specificity.
+        *   If the question includes "streak" or "badge", return an explanation of how the gamification system works.
+        *   If no keywords are matched, return a polite message like, "I'm still learning about that topic. Try asking me about HTML, CSS, or gamification!"
+    *   Ensure this new function also simulates a network delay with `setTimeout`.
+
+---
+
+### **Phase 3: Integration and Security**
+
+1.  **Update `AIPrompt.jsx` Integration:**
+    *   In the `handleQuestionSubmit` function, call the new `getAIAnswerForQuestion` service function, passing the user's question from the state.
+    *   When the response is received, **you must sanitize it using `DOMPurify.sanitize()`**.
+    *   Display the sanitized response in the response area, preferably using `dangerouslySetInnerHTML` to correctly render any safe HTML (like `<strong>` or `<code>` tags) that the AI might return.
+
+---
+
+### **Phase 4: Finalization**
+
+1.  **Update `DEVELOPMENT_PLAN.md`:**
+    *   After successful implementation and testing, find the line for enhancing the AI system and add a sub-bullet to reflect this new functionality. Mark it as complete.
+        ```markdown
+        *   [x] Enhance the AI system for smarter content and technology recommendations.
+            *   [x] Implemented a Q&A feature for the AI assistant.
+        ```
+
+2.  **Final Adherence Check:**
+    *   Perform a final review of all new and modified files to ensure they are fully documented, secure, and adhere to the project's coding standards.

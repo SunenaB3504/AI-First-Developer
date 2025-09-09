@@ -36,6 +36,7 @@ This plan is structured in four distinct phases, aligning with the implementatio
         *   [x] Implement Text-to-Speech (TTS) functionality for audio learning.
         *   [x] Develop the project portfolio builder where users can showcase their work.
         *   [x] Enhance the AI system for smarter content and technology recommendations.
+            *   [x] Implemented a Q&A feature for the AI assistant.
         *   [x] Implement the gamification system (badges, learning streaks).
 
 #### **Phase 4: Professional Tools & Deployment (Weeks 13-16)**
