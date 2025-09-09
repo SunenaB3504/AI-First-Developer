@@ -54,3 +54,47 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
 }
+
+.ai-question-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.ai-question-form textarea {
+  width: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  height: 80px;
+  font-size: 1.1em;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #b3d4fc;
+  resize: vertical;
+  margin-bottom: 12px;
+  background: #f5faff;
+  color: #222;
+}
+
+.ai-question-form button[type="submit"] {
+  align-self: flex-end;
+  background-color: #005a9e;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 24px;
+  font-size: 1em;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.ai-question-form button[type="submit"]:hover:not(:disabled) {
+  background-color: #0074d9;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.12);
+}
+
+.ai-question-form button[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
