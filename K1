@@ -1,0 +1,166 @@
+# AI Content Generation Master Prompt - K1
+
+## Overview
+Generate comprehensive Artificial Intelligence educational content for machine learning and deep learning following the established documentation standards and project requirements.
+
+## Requirements & Process Flow
+
+### 1. Complete Adherence to Documentation Standards
+- Follow the exact structure defined in DEVELOPMENT_PLAN.md
+- Ensure all content aligns with Tier 5 technology requirements
+- Maintain consistency with existing module formats (kotlin.js, react.js patterns)
+- Include all required sections: learningObjectives, sections with content, keyTopics, practicalExercises, codeExamples, aiPrompts
+
+### 2. Content Structure Requirements
+```javascript
+export default {
+  id: "artificial-intelligence",
+  tier: 5,
+  name: "Artificial Intelligence & Machine Learning",
+  description: "Comprehensive description covering AI/ML concepts and practical implementations",
+  difficulty: "Advanced",
+  estimatedHours: 45,
+  prerequisites: ["javascript", "nodejs", "python"],
+  learningObjectives: [
+    // Exactly 15 specific, measurable learning objectives
+  ],
+  sections: [
+    {
+      title: "Section Title",
+      content: "Detailed markdown content with key AI/ML concepts",
+      keyTopics: ["topic1", "topic2", "topic3"],
+      practicalExercises: ["exercise1", "exercise2", "exercise3"],
+      codeExamples: [
+        {
+          title: "Example Title",
+          language: "python",
+          code: `// Properly escaped Python code for AI/ML`
+        }
+      ]
+    }
+    // 5-6 comprehensive sections
+  ],
+  aiPrompts: [
+    {
+      title: "Prompt Title",
+      content: "Contextual question for AI assistant"
+    }
+    // 8 contextual prompts
+  ]
+};
+```
+
+### 3. AI/ML Content Areas to Cover
+- **Python for AI Foundation**: NumPy, Pandas, Matplotlib, scientific computing
+- **Machine Learning Fundamentals**: Supervised/Unsupervised learning, model evaluation
+- **Deep Learning & Neural Networks**: TensorFlow/PyTorch, CNNs, training pipelines
+- **Natural Language Processing**: Text preprocessing, sentiment analysis, question answering
+- **Computer Vision**: Image processing, object detection (YOLO), classification
+- **MLOps & Production Deployment**: Model serving, monitoring, CI/CD for ML
+
+### 4. Code Example Standards
+- All code must be properly escaped for JavaScript strings
+- Include comprehensive comments explaining AI/ML concepts
+- Provide practical, runnable examples with real datasets
+- Cover both traditional ML and modern deep learning approaches
+- Include model training, evaluation, and deployment examples
+
+### 5. Quality Assurance Steps
+
+#### Step 5.1: Content Generation
+Generate the complete AI module content following the established patterns from kotlin.js and other Tier 5 modules.
+
+#### Step 5.2: Update DEVELOPMENT_PLAN.md
+After content generation, update the development plan to mark AI content as complete:
+- Update the content checklist table for Artificial Intelligence row
+- Mark all columns as [x] (completed)
+- Add completion notes about the comprehensive AI content
+
+#### Step 5.3: Document Adherence Verification
+Run comprehensive checks to ensure:
+- All required sections are present and properly formatted
+- Code examples are syntactically correct and properly escaped
+- Content aligns with all 15 learning objectives
+- Structure matches the established patterns
+- All key topics and practical exercises are included
+- AI prompts are contextual and educational
+
+#### Step 5.4: DOMPurify Security Validation
+Execute DOMPurify validation on all generated content:
+```javascript
+const DOMPurify = require('dompurify');
+const { JSDOM } = require('jsdom');
+
+// Validate all HTML/markdown content for XSS vulnerabilities
+function validateContent(content) {
+  const window = new JSDOM('').window;
+  const DOMPurify = require('dompurify')(window);
+
+  // Check for potential XSS in code examples and content
+  const sanitized = DOMPurify.sanitize(content, {
+    ALLOWED_TAGS: ['strong', 'em', 'code', 'pre', 'br', 'p', 'ul', 'li', 'ol'],
+    ALLOW_DATA_ATTR: false
+  });
+
+  return sanitized === content; // Should be true if no malicious content
+}
+```
+
+#### Step 5.5: Final Integration
+- Save the generated content to `src/data/artificial-intelligence.js`
+- Run build verification: `npm run build`
+- Execute security audit: `npm run security:audit`
+- Commit changes with descriptive message
+
+## Execution Checklist
+
+### Pre-Execution
+- [ ] Verify DEVELOPMENT_PLAN.md structure and requirements
+- [ ] Check existing content patterns (kotlin.js, react.js)
+- [ ] Ensure DOMPurify is installed and configured
+- [ ] Review current AI/ML best practices and frameworks
+
+### During Execution
+- [ ] Generate exactly 15 comprehensive learning objectives
+- [ ] Create 5-6 detailed sections with full AI/ML content
+- [ ] Include 15-20 code examples with proper escaping
+- [ ] Add practical exercises for each AI/ML concept
+- [ ] Ensure all content covers modern AI techniques
+
+### Post-Execution Validation
+- [ ] Update DEVELOPMENT_PLAN.md with completion status
+- [ ] Run document adherence verification
+- [ ] Execute DOMPurify validation on all content
+- [ ] Test build process: `npm run build`
+- [ ] Run security audit: `npm run security:audit`
+- [ ] Verify syntax correctness of all Python code examples
+- [ ] Commit changes to repository
+
+## Quality Metrics
+- **Content Completeness**: All AI/ML areas fully covered with comprehensive information
+- **Code Quality**: All examples syntactically correct and properly escaped
+- **Documentation Adherence**: 100% compliance with DEVELOPMENT_PLAN.md requirements
+- **Security**: DOMPurify validation passes for all content
+- **Educational Value**: Content provides clear learning progression from basics to advanced AI topics
+
+## Error Handling
+If any validation step fails:
+1. Document the specific failure
+2. Provide detailed error information
+3. Suggest corrective actions
+4. Re-run failed validations after corrections
+5. Only proceed when all validations pass
+
+## Success Criteria
+- [ ] AI content successfully generated and saved
+- [ ] DEVELOPMENT_PLAN.md updated with completion status
+- [ ] All document adherence checks pass
+- [ ] DOMPurify validation successful
+- [ ] Build process completes without errors
+- [ ] Security audit passes
+- [ ] Changes committed to repository with proper documentation
+
+---
+
+**EXECUTION COMMAND:**
+Run this prompt to generate comprehensive AI content with full compliance to all platform standards and requirements.

@@ -24,13 +24,13 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
   };
 
   useEffect(() => {
-    if (selectedLesson) {
-      const parentModule = modules.find(m => m.sections.some(l => l.title === selectedLesson.title));
+    if (selectedLesson && modules && modules.length > 0) {
+      const parentModule = modules.find(m => m.sections && m.sections.some(l => l.title === selectedLesson.title));
       if (parentModule && collapsedModules.includes(parentModule.id)) {
         toggleModule(parentModule.id);
       }
     }
-  }, [selectedLesson]);
+  }, [selectedLesson, modules]);
 
   useEffect(() => {
     if (selectedLessonRef.current) {
@@ -43,10 +43,10 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
 
   return (
     <nav className="learning-path">
-      {modules.map((module) => {
+      {modules && modules.length > 0 ? modules.map((module) => {
         const isCollapsed = collapsedModules.includes(module.id);
         const allLessonsInSection = module.sections || [];
-        const completedLessonsInSection = allLessonsInSection.filter(l => completedLessons.has(l.id)).length;
+        const completedLessonsInSection = allLessonsInSection.filter(l => completedLessons && completedLessons.has(l.id)).length;
         const isModuleCompleted = allLessonsInSection.length > 0 && completedLessonsInSection === allLessonsInSection.length;
 
         return (
@@ -59,7 +59,7 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
               <ul className="path-lessons">
                 {allLessonsInSection.map((lesson) => {
                   const isSelected = selectedLesson && selectedLesson.title === lesson.title;
-                  const isCompleted = completedLessons.has(lesson.id);
+                  const isCompleted = completedLessons && completedLessons.has(lesson.id);
                   const lessonClass = `path-lesson ${isSelected ? 'selected' : ''} ${isCompleted ? 'completed' : ''}`;
 
                   return (
@@ -80,7 +80,9 @@ const LearningPath = ({ modules, onLessonClick, selectedLesson }) => {
             )}
           </div>
         );
-      })}
+      }) : (
+        <div className="loading-modules">Loading learning modules...</div>
+      )}
     </nav>
   );
 };

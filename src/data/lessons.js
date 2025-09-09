@@ -26,6 +26,7 @@ import reactnativeContent from './reactnative.js';
 import flutterContent from './flutter.js';
 import swiftContent from './swift.js';
 import kotlinContent from './kotlin.js';
+import artificialIntelligenceContent from './artificial-intelligence.js';
 
 export const modules = [
   html5Content,
@@ -53,4 +54,5 @@ export const modules = [
   flutterContent,
   swiftContent,
   kotlinContent,
+  artificialIntelligenceContent,
 ];

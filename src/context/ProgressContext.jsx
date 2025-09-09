@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { getUserProgress, updateUserProgress } from '../services/progressService';
-import { updateLearningStreak, awardBadge } from '../services/gamificationService';
+import { updateLearningStreak, awardBadge, getUserGamificationData } from '../services/gamificationService';
 import { badges } from '../data/badges';
 import { modules } from '../data/lessons';
 import { auth } from '../firebase/config'; // Assuming auth service for user ID
@@ -35,7 +35,7 @@ export const ProgressProvider = ({ children }) => {
   }, []);
 
   const markLessonCompleted = (lessonId) => {
-    if (user && !completedLessons.has(lessonId)) {
+    if (user && completedLessons && !completedLessons.has(lessonId)) {
       const newCompletedLessons = new Set(completedLessons);
       newCompletedLessons.add(lessonId);
       setCompletedLessons(newCompletedLessons);
@@ -43,7 +43,8 @@ export const ProgressProvider = ({ children }) => {
 
       // Gamification logic
       updateLearningStreak(user.uid).then(async () => {
-        const { streak } = await getUserGamificationData(user.uid);
+        const gamificationData = await getUserGamificationData(user.uid);
+        const { streak } = gamificationData;
         if (streak.currentStreak === 5) {
           const streakBadge = badges.find(b => b.id === 'streak-5');
           if (streakBadge) {
@@ -52,9 +53,9 @@ export const ProgressProvider = ({ children }) => {
         }
       });
 
-      const module = modules.find(m => m.lessons.some(l => l.id === lessonId));
+      const module = modules.find(m => m.sections.some(l => l.id === lessonId));
       if (module) {
-        const allLessonsInModuleCompleted = module.lessons.every(l => newCompletedLessons.has(l.id));
+        const allLessonsInModuleCompleted = module.sections.every(l => newCompletedLessons.has(l.id));
         if (allLessonsInModuleCompleted) {
           const moduleBadge = badges.find(b => b.id === `${module.id}-novice`);
           if (moduleBadge) {

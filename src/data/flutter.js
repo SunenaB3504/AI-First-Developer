@@ -103,9 +103,9 @@ void main() {
   // Functions
   String greet(String name, [String? title]) {
     if (title != null) {
-      return 'Hello, \${title} \${name}!';
+      return 'Hello, \\\${title} \\\${name}!';
     }
-    return 'Hello, \${name}!';
+    return 'Hello, \\\${name}!';
   }
 
   // Arrow functions
@@ -118,14 +118,14 @@ void main() {
     fontSize ??= 14;
     darkMode ??= false;
 
-    print('Theme: \${theme}, Font Size: \${fontSize}, Dark Mode: \${darkMode}');
+    print('Theme: \\\${theme}, Font Size: \\\${fontSize}, Dark Mode: \\\${darkMode}');
   }
 
   // Named parameters
   configure(theme: 'dark', fontSize: 16);
 
   print(greet('World'));
-  print('Sum: \${add(5, 3)}');
+  print('Sum: \\\${add(5, 3)}');
 }
 
 // Classes and OOP
@@ -146,7 +146,7 @@ class Person {
 
   // Methods
   void introduce() {
-    print('Hi, I\\'m \${name} and I\\'m \${age} years old.');
+    print('Hi, I\\'m \\\${name} and I\\'m \\\${age} years old.');
   }
 
   // Getter
@@ -159,7 +159,7 @@ class Person {
 
   // toString override
   @override
-  String toString() => 'Person(name: \${name}, age: \${age}, email: \${email})';
+  String toString() => 'Person(name: \\\${name}, age: \\\${age}, email: \\\${email})';
 }
 
 // Inheritance
@@ -185,7 +185,7 @@ class Student extends Person {
   @override
   void introduce() {
     super.introduce();
-    print('I study at \${school} and my average grade is \${averageGrade.toStringAsFixed(1)}');
+    print('I study at \\\${school} and my average grade is \\\${averageGrade.toStringAsFixed(1)}');
   }
 }
 
@@ -212,7 +212,7 @@ class Circle extends Shape {
 
   @override
   void draw() {
-    print('Drawing a circle with radius \${radius}');
+    print('Drawing a circle with radius \\\${radius}');
   }
 }
 
@@ -233,7 +233,7 @@ class Rectangle extends Shape {
 mixin Logger {
   void log(String message) {
     final timestamp = DateTime.now().toIso8601String();
-    print('[\\${timestamp}] \\${message}');
+    print('[\\\${timestamp}] \\\${message}');
   }
 }
 
@@ -296,11 +296,11 @@ void demonstrateOOP() {
 
   // Shapes
   var circle = Circle(5.0);
-  print('Circle area: \\${circle.area}');
+  print('Circle area: \\\${circle.area}');
   circle.draw();
 
   var rectangle = Rectangle(10.0, 8.0);
-  print('Rectangle area: \\${rectangle.area}');
+  print('Rectangle area: \\\${rectangle.area}');
 
   // Mixins
   var service = Service();
@@ -310,14 +310,14 @@ void demonstrateOOP() {
   var stringStack = Stack<String>();
   stringStack.push('Hello');
   stringStack.push('World');
-  print('Stack: \\${stringStack}');
-  print('Popped: \\${stringStack.pop()}');
+  print('Stack: \\\${stringStack}');
+  print('Popped: \\\${stringStack.pop()}');
 
   var numbers = [3, 1, 4, 1, 5, 9, 2, 6];
-  print('Max number: \\${findMax(numbers)}');
+  print('Max number: \\\${findMax(numbers)}');
 
   var words = ['apple', 'banana', 'cherry'];
-  print('Max word: \\${findMax(words)}');
+  print('Max word: \\\${findMax(words)}');
 }
     },
     {
@@ -398,7 +398,7 @@ class _MyHomePageState extends State<MyHomePage> {
               \\'You have pushed the button this many times:\\',
             ),
             Text(
-              \\'$_counter\\',
+              \\'\\$_counter\\',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
