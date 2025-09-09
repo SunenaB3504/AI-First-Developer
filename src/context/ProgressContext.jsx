@@ -1,6 +1,9 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 import { getUserProgress, updateUserProgress } from '../services/progressService';
+import { updateLearningStreak, awardBadge } from '../services/gamificationService';
+import { badges } from '../data/badges';
+import { modules } from '../data/lessons';
 import { auth } from '../firebase/config'; // Assuming auth service for user ID
 
 const ProgressContext = createContext();
@@ -37,6 +40,28 @@ export const ProgressProvider = ({ children }) => {
       newCompletedLessons.add(lessonId);
       setCompletedLessons(newCompletedLessons);
       updateUserProgress(user.uid, lessonId);
+
+      // Gamification logic
+      updateLearningStreak(user.uid).then(async () => {
+        const { streak } = await getUserGamificationData(user.uid);
+        if (streak.currentStreak === 5) {
+          const streakBadge = badges.find(b => b.id === 'streak-5');
+          if (streakBadge) {
+            awardBadge(user.uid, streakBadge);
+          }
+        }
+      });
+
+      const module = modules.find(m => m.lessons.some(l => l.id === lessonId));
+      if (module) {
+        const allLessonsInModuleCompleted = module.lessons.every(l => newCompletedLessons.has(l.id));
+        if (allLessonsInModuleCompleted) {
+          const moduleBadge = badges.find(b => b.id === `${module.id}-novice`);
+          if (moduleBadge) {
+            awardBadge(user.uid, moduleBadge);
+          }
+        }
+      }
     }
   };
 

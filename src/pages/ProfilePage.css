@@ -1,0 +1,27 @@
+.profile-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-page h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.badges-section h2 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.error-message {
+  color: #d9534f;
+  text-align: center;
+}

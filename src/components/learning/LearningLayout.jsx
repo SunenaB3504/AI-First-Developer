@@ -3,6 +3,7 @@ import LearningPath from './LearningPath';
 import LessonView from './LessonView';
 import { modules } from '../../data/lessons';
 import './LearningLayout.css';
+import { useProgress } from '../../context/ProgressContext';
 
 /**
  * LearningLayout component that arranges the sidebar and lesson view.
@@ -11,10 +12,12 @@ import './LearningLayout.css';
 const LearningLayout = () => {
   const [selectedLesson, setSelectedLesson] = useState(null);
   const [selectedModule, setSelectedModule] = useState(null);
+  const { markLessonCompleted } = useProgress();
 
   const handleLessonClick = (lesson, module) => {
     setSelectedLesson(lesson);
     setSelectedModule(module);
+    markLessonCompleted(lesson.id);
   };
 
   return (

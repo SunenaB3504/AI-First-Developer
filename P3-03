@@ -1,0 +1,92 @@
+### **Prompt for AI-First Developer**
+
+**Objective:** Implement a gamification system to enhance user engagement, featuring learning streaks and achievement badges.
+
+**Guiding Principles:**
+1.  **Complete Adherence to Documentation:** All code must be fully documented with JSDoc comments explaining the purpose of components, functions, and complex logic.
+2.  **Modular & Scalable Design:** Create reusable components and services that can be easily extended with new badges and gamification features in the future.
+3.  **Atomic Updates:** Follow all instructions step-by-step. Do not proceed to the next step until the current one is complete and validated.
+
+---
+
+### **Phase 1: Backend and Service Layer**
+
+1.  **Create `src/services/gamificationService.js`:**
+    *   This service will manage all interactions with Firestore related to gamification.
+    *   **Firestore Data Model:**
+        *   A user's learning streak will be stored in their existing profile document (e.g., `users/{userId}`). Add two fields: `currentStreak` (number) and `lastActivityDate` (timestamp).
+        *   A user's earned badges will be stored in a sub-collection: `users/{userId}/badges`.
+    *   **Implement Service Functions:**
+        *   `updateLearningStreak(userId)`:
+            *   Fetches the user's profile.
+            *   Compares `lastActivityDate` with the current date.
+            *   If the last activity was yesterday, increment `currentStreak`.
+            *   If the last activity was before yesterday, reset `currentStreak` to 1.
+            *   If the last activity was today, do nothing.
+            *   Updates `lastActivityDate` to the current timestamp.
+        *   `awardBadge(userId, badge)`:
+            *   Checks if the user has already earned the badge.
+            *   If not, adds a new document to the `users/{userId}/badges` sub-collection containing the badge details (e.g., `id`, `name`, `description`, `icon`, `dateAwarded`).
+        *   `getUserGamificationData(userId)`:
+            *   Fetches the user's profile to get streak data.
+            *   Fetches all documents from the `users/{userId}/badges` sub-collection.
+            *   Returns an object containing both streak and badges.
+
+2.  **Create `src/data/badges.js`:**
+    *   Create a file to define all available badges in the application.
+    *   Export an array of badge objects. Each object should have `id`, `name`, `description`, and a placeholder `icon` (e.g., a simple emoji for now).
+    *   **Initial Badges:**
+        *   `html-novice`: "HTML Novice" - Awarded for completing the HTML module.
+        *   `css-novice`: "CSS Novice" - Awarded for completing the CSS module.
+        *   `js-novice`: "JavaScript Novice" - Awarded for completing the JavaScript module.
+        *   `streak-5`: "5-Day Streak" - Awarded for reaching a 5-day learning streak.
+
+---
+
+### **Phase 2: Frontend UI Components**
+
+1.  **Create `src/components/gamification/` Directory.**
+
+2.  **Create `LearningStreak.jsx` and `LearningStreak.css`:**
+    *   A simple component that receives the `currentStreak` as a prop.
+    *   Displays the streak with a fire emoji: "🔥 {currentStreak} Day Streak".
+    *   If the streak is 0 or 1, display an encouraging message like "Start your learning streak today!".
+
+3.  **Create `BadgeCard.jsx` and `BadgeCard.css`:**
+    *   A component to display a single badge.
+    *   Props: `badge` (object containing `name`, `description`, `icon`).
+    *   Displays the icon, name, and description in a visually appealing card format.
+
+4.  **Create `ProfilePage.jsx` and `ProfilePage.css` in `src/pages/`:**
+    *   This page will serve as the user's dashboard for viewing their achievements.
+    *   Use `useEffect` to fetch the user's gamification data (`getUserGamificationData`) on component mount.
+    *   Display the `LearningStreak` component with the fetched data.
+    *   Display a "My Badges" section that maps over the fetched badges and renders a `BadgeCard` for each one.
+
+---
+
+### **Phase 3: Integration and Logic**
+
+1.  **Update Routing in `App.jsx`:**
+    *   Add a new protected route for `/profile` that renders the `ProfilePage`.
+
+2.  **Update Navigation in `Header.jsx`:**
+    *   Add a "Profile" link to the header that is only visible when a user is logged in.
+
+3.  **Integrate Streak and Badge Logic:**
+    *   Locate the component where a user's progress is updated upon lesson completion (likely `LessonView.jsx` or a similar component).
+    *   When a lesson is marked as complete:
+        *   Call `gamificationService.updateLearningStreak(currentUser.uid)`.
+        *   Check if the completion of this lesson also completes a module.
+        *   If a module is completed, call `gamificationService.awardBadge(currentUser.uid, relevantBadgeObject)`.
+        *   Check the user's new streak count. If it matches a streak-related badge (e.g., 5 days), call `awardBadge`.
+
+---
+
+### **Phase 4: Finalization**
+
+1.  **Update `DEVELOPMENT_PLAN.md`:**
+    *   After successful implementation and testing, mark the "Implement the gamification system" task as complete `[x]`.
+
+2.  **Final Adherence Check:**
+    *   Perform a final review of all new and modified files to ensure they are fully documented and adhere to the project's coding standards.
