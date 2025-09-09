@@ -81,10 +81,10 @@ This checklist tracks the creation of all required content features for each of 
 | Git | 1 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | **Tier 2** | | | | | | | | | | |
 | Node.js | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
-| Express.js | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| SQLite | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| REST APIs | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
-| Responsive Design | 2 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
+| Express.js | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| SQLite | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| REST APIs | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
+| Responsive Design | 2 | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] | [x] |
 | **Tier 3** | | | | | | | | | | |
 | React | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
 | Firebase | 3 | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] | [ ] |
