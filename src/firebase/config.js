@@ -11,13 +11,13 @@ import { getAnalytics } from "firebase/analytics";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDtFFUFSfT6sOqnxJVrZ3-H3i66Cga2th0",
-  authDomain: "ai-first-developer.firebaseapp.com",
-  projectId: "ai-first-developer",
-  storageBucket: "ai-first-developer.firebasestorage.app",
-  messagingSenderId: "914515554273",
-  appId: "1:914515554273:web:d8b69ab353166c30196ca0",
-  measurementId: "G-SXJPECZJZ3"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase

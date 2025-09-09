@@ -1,0 +1,372 @@
+# T2-Rest: Comprehensive Content Generation Prompt for Remaining Tier 2 Technologies
+
+## Executive Summary
+
+This prompt (T2-Rest) provides comprehensive specifications for generating content for the remaining Tier 2 technologies: Express.js, SQLite, REST APIs, and Responsive Design. Each technology must be created as a complete, production-ready module following the exact specifications from T2-1, ensuring seamless integration with the existing AI-First Developer platform.
+
+## Core Requirements
+
+### 1. Technology Specifications
+
+**Express.js Module Requirements:**
+- **ID**: "expressjs"
+- **Tier**: 2
+- **Name**: "Express.js"
+- **Difficulty**: "intermediate"
+- **Prerequisites**: ["nodejs", "javascript"]
+- **Estimated Hours**: 25
+
+**SQLite Module Requirements:**
+- **ID**: "sqlite"
+- **Tier**: 2
+- **Name**: "SQLite"
+- **Difficulty**: "intermediate"
+- **Prerequisites**: ["nodejs", "json"]
+- **Estimated Hours**: 20
+
+**REST APIs Module Requirements:**
+- **ID**: "rest-apis"
+- **Tier**: 2
+- **Name**: "REST APIs"
+- **Difficulty**: "intermediate"
+- **Prerequisites**: ["nodejs", "expressjs", "json"]
+- **Estimated Hours**: 30
+
+**Responsive Design Module Requirements:**
+- **ID**: "responsive-design"
+- **Tier**: 2
+- **Name**: "Responsive Design"
+- **Difficulty**: "intermediate"
+- **Prerequisites**: ["html5", "css3"]
+- **Estimated Hours**: 25
+
+### 2. Content Structure Requirements
+
+Each module must follow the EXACT JSON schema structure defined in T2-1:
+
+```javascript
+const technologyContent = {
+  id: "technology-id",
+  tier: 2,
+  name: "Technology Name",
+  description: "Comprehensive description...",
+  difficulty: "intermediate",
+  estimatedHours: XX,
+  prerequisites: ["prereq1", "prereq2"],
+  learningObjectives: [
+    "Objective 1",
+    "Objective 2",
+    // ... 8-12 objectives
+  ],
+  sections: [
+    {
+      id: "section-id",
+      title: "Section Title",
+      content: "Detailed content...",
+      keyTopics: ["topic1", "topic2"],
+      practicalExercises: ["exercise1", "exercise2"],
+      codeExamples: [
+        {
+          title: "Example Title",
+          code: `// code here`
+        }
+      ]
+    }
+    // ... 6-10 sections per technology
+  ],
+  projects: [
+    {
+      title: "Project Title",
+      description: "Project description"
+    }
+  ],
+  assessments: [
+    {
+      type: "quiz",
+      questions: [
+        {
+          question: "Question?",
+          options: ["A", "B", "C", "D"],
+          correctAnswer: "Correct Answer"
+        }
+      ]
+    },
+    {
+      type: "evaluation",
+      questions: [
+        {
+          question: "Open-ended question?",
+          options: [],
+          correctAnswer: ""
+        }
+      ]
+    }
+  ],
+  aiPrompts: [
+    "Prompt 1",
+    "Prompt 2",
+    // ... 8-12 prompts
+  ],
+  resources: [
+    { name: "Resource Name", url: "https://example.com" }
+  ],
+  toolsRequired: [
+    "Tool 1",
+    "Tool 2"
+  ],
+  bestPractices: [
+    "Best practice 1",
+    "Best practice 2"
+  ],
+  commonPitfalls: [
+    "Pitfall 1",
+    "Pitfall 2"
+  ],
+  careerRelevance: "Career relevance description"
+};
+
+export default technologyContent;
+```
+
+### 3. Content Quality Standards
+
+#### Educational Excellence
+- **Progressive Learning**: Each section builds upon previous knowledge
+- **Practical Focus**: Emphasize real-world application over theory
+- **Code-First Approach**: Prioritize working code examples
+- **Problem-Solution Format**: Present challenges and solutions
+
+#### Technical Accuracy
+- **Current Best Practices**: Use modern, industry-standard approaches
+- **Version Compatibility**: Specify compatible versions
+- **Cross-Platform**: Ensure examples work on Windows, macOS, Linux
+- **Security Conscious**: Include security considerations throughout
+
+#### User Experience
+- **Clear Explanations**: Use analogies and simple language
+- **Visual Learning**: Include diagrams and visual aids in descriptions
+- **Interactive Elements**: Design content for hands-on learning
+- **Progressive Disclosure**: Reveal complexity gradually
+
+### 4. Integration Requirements
+
+#### File Structure
+- **Location**: `src/data/[technology].js`
+- **Naming**: Use kebab-case for multi-word technologies (e.g., `rest-apis.js`)
+- **Export**: Must use `export default technologyContent;`
+
+#### Registry Integration
+- **Import**: Add to `src/data/lessons.js`
+- **Order**: Maintain logical learning progression
+- **Dependencies**: Ensure prerequisite relationships are maintained
+
+#### Navigation Integration
+- **Sidebar**: Must appear in learning navigation
+- **Progress Tracking**: Integrate with existing progress system
+- **Search**: Content must be discoverable
+
+### 5. Content Depth Requirements
+
+#### Express.js (8-10 Sections)
+1. **Express Fundamentals** - Installation, basic server, middleware
+2. **Routing** - Route parameters, query strings, route handlers
+3. **Middleware Deep Dive** - Custom middleware, error handling, CORS
+4. **Template Engines** - EJS, Pug, Handlebars integration
+5. **Static Files** - Serving CSS, JS, images
+6. **Form Handling** - POST data, file uploads, validation
+7. **Sessions & Cookies** - Session management, cookie handling
+8. **Security** - Helmet, rate limiting, input validation
+9. **Production Deployment** - PM2, environment variables, logging
+10. **Advanced Patterns** - MVC structure, API versioning
+
+#### SQLite (6-8 Sections)
+1. **SQLite Fundamentals** - Installation, database creation, basic queries
+2. **Database Design** - Tables, schemas, relationships, normalization
+3. **CRUD Operations** - Create, Read, Update, Delete with examples
+4. **Advanced Queries** - Joins, aggregations, subqueries
+5. **Data Types & Constraints** - SQLite data types, primary keys, foreign keys
+6. **Transactions** - ACID properties, rollback, commit
+7. **Performance Optimization** - Indexing, query optimization
+8. **Integration Patterns** - ORMs, connection pooling, migrations
+
+#### REST APIs (8-10 Sections)
+1. **REST Principles** - HTTP methods, status codes, resource design
+2. **API Design** - Endpoint structure, versioning, documentation
+3. **HTTP Methods** - GET, POST, PUT, DELETE implementation
+4. **Request/Response** - Headers, body formats (JSON, XML), content negotiation
+5. **Authentication** - API keys, JWT, OAuth implementation
+6. **Error Handling** - Proper error responses, status codes
+7. **Rate Limiting** - Implementation strategies, best practices
+8. **API Testing** - Tools, strategies, automated testing
+9. **Documentation** - OpenAPI/Swagger, API documentation tools
+10. **API Security** - HTTPS, input validation, CORS, security headers
+
+#### Responsive Design (7-9 Sections)
+1. **Responsive Fundamentals** - Viewport, media queries, breakpoints
+2. **Flexible Layouts** - Flexbox, CSS Grid, fluid layouts
+3. **Mobile-First Design** - Progressive enhancement, mobile-first workflow
+4. **Images & Media** - Responsive images, video, performance optimization
+5. **Typography** - Fluid typography, readability, accessibility
+6. **Navigation Patterns** - Mobile menus, touch-friendly interfaces
+7. **Testing & Debugging** - Browser dev tools, device testing
+8. **Performance** - Critical CSS, lazy loading, optimization techniques
+9. **Advanced Techniques** - Container queries, modern CSS features
+
+### 6. Code Example Requirements
+
+#### Quality Standards
+- **Runnable Code**: Every example must be immediately executable
+- **Error Handling**: Include proper error handling in all examples
+- **Comments**: Clear, educational comments explaining each step
+- **Best Practices**: Follow industry standards and security practices
+- **Progressive Complexity**: Start simple, build to advanced concepts
+
+#### Example Structure
+```javascript
+// Descriptive comment explaining the example
+const exampleCode = `
+// Complete, runnable code with proper structure
+// Includes error handling and best practices
+// Educational comments throughout
+`;
+```
+
+#### Testing Requirements
+- **Validation**: Each example should include validation steps
+- **Output Examples**: Show expected output or results
+- **Troubleshooting**: Include common issues and solutions
+
+### 7. Assessment and Evaluation
+
+#### Quiz Structure
+- **Multiple Choice**: 8-12 questions per technology
+- **Answer Options**: 4 options per question, one correct
+- **Explanations**: Include explanations for correct answers
+- **Progressive Difficulty**: Questions increase in complexity
+
+#### Evaluation Questions
+- **Open-Ended**: 3-5 comprehensive questions
+- **Conceptual Understanding**: Test deep understanding
+- **Practical Application**: Assess ability to apply concepts
+- **Problem-Solving**: Evaluate analytical skills
+
+### 8. AI Integration
+
+#### Prompt Quality
+- **Specific Questions**: Target key concepts and common challenges
+- **Progressive Difficulty**: From basic to advanced topics
+- **Practical Focus**: Emphasize real-world application
+- **Troubleshooting**: Include debugging and problem-solving prompts
+
+#### Learning Enhancement
+- **Contextual Help**: Provide relevant context for each prompt
+- **Code Review**: Include prompts for code improvement
+- **Best Practices**: Guide users toward industry standards
+
+### 9. Documentation and Resources
+
+#### External Resources
+- **Official Documentation**: Primary technology documentation
+- **Tutorials**: High-quality learning resources
+- **Tools**: Development and testing tools
+- **Communities**: Relevant developer communities
+
+#### Internal Resources
+- **Cross-References**: Link to related technologies
+- **Prerequisites**: Clear prerequisite relationships
+- **Next Steps**: Guide to advanced topics
+
+### 10. Quality Assurance Checklist
+
+#### Pre-Integration Checks
+- [ ] JSON schema compliance verified
+- [ ] All required fields present and populated
+- [ ] Code examples tested and functional
+- [ ] Prerequisites correctly specified
+- [ ] Learning objectives comprehensive and measurable
+- [ ] Content flows logically and progressively
+
+#### Integration Checks
+- [ ] File created in correct location
+- [ ] Import added to lessons.js
+- [ ] Navigation integration verified
+- [ ] No syntax errors in generated code
+- [ ] Cross-references to other technologies working
+
+#### Post-Integration Validation
+- [ ] Content appears in sidebar navigation
+- [ ] All sections load correctly
+- [ ] Code examples render properly
+- [ ] Progress tracking functions
+- [ ] Search functionality includes new content
+
+### 11. Execution Workflow
+
+#### Phase 1: Content Generation
+1. Generate Express.js content following specifications
+2. Test integration and functionality
+3. Update DEVELOPMENT_PLAN.md checklist
+4. Run DOMPurify validation
+5. Proceed to next technology
+
+#### Phase 2: Quality Validation
+1. Verify all content meets requirements
+2. Test cross-technology dependencies
+3. Validate learning progression
+4. Run comprehensive integration tests
+
+#### Phase 3: Documentation Update
+1. Update all checklists in DEVELOPMENT_PLAN.md
+2. Mark Phase 2 content as complete
+3. Update progress indicators
+4. Document any issues or improvements needed
+
+### 12. Success Criteria
+
+#### Content Quality
+- [ ] All technologies have comprehensive, accurate content
+- [ ] Code examples are runnable and educational
+- [ ] Learning objectives are clear and achievable
+- [ ] Assessments effectively test understanding
+
+#### Technical Integration
+- [ ] All modules integrate seamlessly with existing platform
+- [ ] Navigation and progress tracking work correctly
+- [ ] Search and discovery functions properly
+- [ ] Performance meets platform standards
+
+#### User Experience
+- [ ] Content is engaging and easy to follow
+- [ ] Progressive learning path is maintained
+- [ ] Cross-references enhance learning experience
+- [ ] Mobile and desktop experiences are optimized
+
+### 13. Risk Mitigation
+
+#### Content Accuracy
+- **Review Process**: Each module reviewed for technical accuracy
+- **Version Updates**: Content updated for current technology versions
+- **Security Review**: All code examples reviewed for security best practices
+
+#### Integration Issues
+- **Testing Strategy**: Comprehensive testing before production deployment
+- **Rollback Plan**: Ability to revert changes if issues arise
+- **Monitoring**: Post-deployment monitoring for performance and errors
+
+#### Maintenance Planning
+- **Update Schedule**: Regular content updates for technology changes
+- **Feedback Integration**: User feedback incorporated into content improvements
+- **Version Control**: All changes tracked and documented
+
+---
+
+## Final Instructions
+
+1. **Generate each technology module individually** following this specification
+2. **Test integration** after each module creation
+3. **Update DEVELOPMENT_PLAN.md** with completion status
+4. **Run DOMPurify validation** on all generated content
+5. **Verify cross-technology dependencies** and learning progression
+6. **Document any issues** or required adjustments
+
+This prompt ensures all Tier 2 technologies are created with the same high quality and integration standards as the Node.js module, maintaining consistency across the entire learning platform.

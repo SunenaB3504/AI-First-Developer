@@ -1,0 +1,65 @@
+**Objective:** Conduct comprehensive final testing (performance, security, E2E) for the web application to ensure production readiness and quality standards.
+
+**Tasks:**
+
+1.  **Set Up Testing Infrastructure:**
+    *   Configure Jest and React Testing Library (already in package.json)
+    *   Set up test scripts in package.json for running different test suites
+    *   Create test utilities and mock data for consistent testing
+
+2.  **Unit Testing:**
+    *   Write unit tests for all React components (Header, Footer, AIPrompt, etc.)
+    *   Test services (aiService, gamificationService, analyticsService, etc.)
+    *   Test utility functions and custom hooks
+    *   Aim for >80% code coverage
+
+3.  **Integration Testing:**
+    *   Test component interactions and data flow
+    *   Test authentication flows and protected routes
+    *   Test Firestore integration and data persistence
+    *   Test context providers (AuthContext, ProgressContext)
+
+4.  **End-to-End Testing:**
+    *   Set up Cypress for E2E testing
+    *   Create test scenarios for user journeys (registration, login, lesson completion, portfolio creation)
+    *   Test responsive design across different screen sizes
+    *   Test accessibility features
+
+5.  **Performance Testing:**
+    *   Implement Lighthouse audits for performance metrics
+    *   Test bundle size and loading times
+    *   Optimize images and assets for web performance
+    *   Test on various network conditions
+
+6.  **Security Testing:**
+    *   Verify DOMPurify implementation across all dynamic content
+    *   Test input validation and sanitization
+    *   Check for common vulnerabilities (XSS, CSRF)
+    *   Review Firebase security rules
+
+7.  **Update `DEVELOPMENT_PLAN.md`:**
+    *   After successful testing implementation, mark the "Conduct final testing" task as complete (`[x]`).
+
+8.  **Complete Adherence to Documentation:**
+    *   Ensure all new and modified code includes comprehensive comments, JSDoc for functions, and inline explanations where necessary.
+    *   Follow consistent naming conventions, code formatting, and project structure guidelines.
+    *   Document any new APIs, components, or services with clear descriptions of their purpose, parameters, and usage.
+
+9.  **Update DEVELOPMENT_PLAN.md After Each Execution:**
+    *   After completing each task or feature implementation, immediately update `DEVELOPMENT_PLAN.md` to mark the relevant items as complete (`[x]`).
+    *   Add any new tasks or sub-tasks that arise during development.
+    *   Ensure the plan reflects the current progress accurately, including any changes in timelines or priorities.
+
+10. **Run Final Recheck for Document Adherence:**
+    *   Before marking any task as complete, perform a thorough review of all modified files.
+    *   Verify that documentation is complete, code is well-structured, and all standards are met.
+    *   Check for any linting errors, unused imports, or potential security vulnerabilities.
+
+11. **Run DOMPurify:**
+    *   Apply DOMPurify to sanitize all dynamic content before rendering in the application.
+    *   Ensure that any user-generated content, AI responses, or external data is properly sanitized to prevent XSS attacks.
+    *   Integrate DOMPurify into all relevant components and services where HTML content is displayed.
+
+12. **Copy the Prompt to File P4-02:**
+    *   Save this prompt to a file named `P4-02` for future reference and tracking.
+    *   Ensure the file is stored in the project root directory.

@@ -7,6 +7,7 @@ import javascriptContent from './javascript.js';
 import devtoolsContent from './devtools.js';
 import jsonContent from './json.js';
 import gitContent from './git.js';
+import nodejsContent from './nodejs.js';
 
 export const modules = [
   html5Content,
@@ -15,4 +16,5 @@ export const modules = [
   devtoolsContent,
   jsonContent,
   gitContent,
+  nodejsContent,
 ];

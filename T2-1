@@ -1,0 +1,582 @@
+# T2-1: Node.js Content Generation Prompt
+
+## EXECUTION REQUIREMENTS
+
+**MANDATORY PROTOCOLS:**
+1. **Complete Documentation Adherence**: Strictly follow all project documentation (AI_DEVELOPMENT_PROMPT.md, D### **Context Preservation Strategy:**
+- **Development Documentation**: Maintain CHANGE## CONTENT INTEGRATION REQUIREMENTS
+
+**MANDATORY APP INTEGRATION SPECIFICATIONS:**
+
+### **File Structure & Location:**
+- **Content File**: Create `src/data/nodejs.js` following existing pattern
+- **Import Integration**: Add to `src/data/lessons.js` modules array
+- **Module ID**: Use `"nodejs"` (matches existing naming convention)
+- **Tier Assignment**: Set `tier: 2` for proper categorization
+
+### **Data Structure Compliance:**
+```javascript
+// EXACT FORMAT REQUIRED (matches html5.js structure)
+const nodejsContent = {
+  id: "nodejs",           // String - must match filename
+  tier: 2,                // Number - Tier 2 for intermediate level
+  name: "Node.js",        // String - Display name
+  description: "...",     // String - Brief description
+  difficulty: "intermediate", // String - "beginner|intermediate|advanced"
+  estimatedHours: 40,     // Number - Learning time estimate
+  prerequisites: ["javascript", "json"], // Array - Required technologies
+  learningObjectives: [...], // Array of strings
+  sections: [             // Array of section objects
+    {
+      id: "nodejs-basics", // String - Unique section identifier
+      title: "Node.js Basics", // String - Display title
+      content: "...",     // String - Markdown content
+      keyTopics: [...],   // Array of strings
+      codeExamples: [     // Array of code example objects
+        {
+          title: "...",   // String - Example title
+          code: "..."     // String - Code content
+        }
+      ]
+    }
+  ],
+  aiPrompts: [...],       // Array of strings
+  resources: [...],       // Array of resource objects
+  toolsRequired: [...],   // Array of strings
+  bestPractices: [...],   // Array of strings
+  commonPitfalls: [...],  // Array of strings
+  careerRelevance: "..."  // String - Career context
+};
+
+export default nodejsContent;
+```
+
+### **Navigation Integration:**
+- **Sidebar Display**: Content appears in LearningPath component sidebar
+- **Collapsible Module**: Node.js sections expand/collapse like existing modules
+- **Progress Tracking**: Automatic integration with ProgressContext
+- **Lesson Selection**: Click handling through existing onLessonClick mechanism
+- **Visual Indicators**: Completion status and selection highlighting
+
+### **Content Display Integration:**
+- **LessonView Component**: Content renders in existing LessonView.jsx
+- **DOMPurify Sanitization**: All HTML content automatically sanitized
+- **TTS Integration**: Text-to-speech button automatically available
+- **AI Prompt Integration**: Contextual AI prompts through existing AIPrompt component
+- **Responsive Layout**: Content adapts to existing responsive design
+
+### **Progress Tracking Integration:**
+- **Automatic Completion**: Lessons marked complete on click (existing behavior)
+- **Progress Persistence**: Saved to Firestore via ProgressContext
+- **Visual Feedback**: Progress bars and completion indicators
+- **Cross-Device Sync**: Progress syncs across web and mobile platforms
+
+### **Routing & Navigation Flow:**
+- **Main Learning Route**: Accessible via "/" route (existing LearningLayout)
+- **No New Routes Required**: Integrates with existing routing structure
+- **Header/Footer Context**: Uses existing Layout component structure
+- **Breadcrumb Navigation**: Automatic integration with existing navigation
+
+### **Component Integration Points:**
+- **LearningLayout.jsx**: Main container component
+- **LearningPath.jsx**: Sidebar navigation component
+- **LessonView.jsx**: Content display component
+- **ProgressContext**: State management for progress tracking
+- **AuthContext**: User authentication integration
+
+### **Styling & Theme Integration:**
+- **Existing CSS Classes**: Use existing `.lesson-view`, `.code-block`, `.key-topics` classes
+- **Material Design**: Follow existing Material Design implementation
+- **Responsive Breakpoints**: Match existing responsive design patterns
+- **Color Scheme**: Use defined color palette from UI_UX_DESIGN_SYSTEM.md
+
+### **Testing Integration:**
+- **Existing Test Structure**: Follow patterns in `src/test/` directory
+- **Component Testing**: Test integration with existing components
+- **E2E Testing**: Include in existing Cypress test suite
+- **Performance Testing**: Include in Lighthouse CI pipeline
+
+### **Component Data Flow:**
+1. **Data Loading**: Node.js content loaded via `src/data/lessons.js`
+2. **Navigation Rendering**: LearningPath component displays Node.js in sidebar
+3. **Lesson Selection**: User clicks → `handleLessonClick` → `setSelectedLesson`
+4. **Content Display**: LessonView component receives lesson data
+5. **Progress Update**: ProgressContext automatically tracks completion
+6. **AI Integration**: AIPrompt component provides contextual assistance
+7. **TTS Integration**: TTSButton component enables audio learning
+
+### **User Experience Flow:**
+1. **Discovery**: User sees "Node.js" in sidebar navigation (Tier 2)
+2. **Module Expansion**: Clicks module title to expand/collapse sections
+3. **Lesson Selection**: Clicks individual lesson → content loads in main area
+4. **Content Consumption**: Reads content, views code examples, key topics
+5. **Interactive Learning**: Uses AI prompts, TTS, progress tracking
+6. **Completion Tracking**: Automatic progress updates and visual feedback
+7. **Cross-Platform Sync**: Progress syncs across devices via Firebase
+
+### **Technical Integration Points:**
+- **State Management**: Integrates with existing React Context (AuthContext, ProgressContext)
+- **Data Persistence**: Automatic Firestore integration for progress tracking
+- **Component Communication**: Props-based data flow through existing component hierarchy
+- **Styling Consistency**: Uses existing CSS classes and Material Design theming
+- **Performance Optimization**: Content loaded on-demand, cached for offline access for all changes
+- **Code Comments**: Comprehensive JSDoc comments for all functions
+- **Architecture Decisions**: ADR directory for major technical decisions
+- **Progress Tracking**: All work linked to DEVELOPMENT_PLAN.md tasks
+- **Git Standards**: Conventional commits, Git-Flow branching model
+
+### **Modular Architecture Guidelines:**
+- **Component-Based Design**: Small, reusable, independent components
+- **Service Layer**: Abstract business logic from UI components
+- **Data Layer**: Isolated data access logic
+- **Utility Functions**: Shared utils directory for common functions
+- **Theme System**: Centralized styling variables for easy updatesMENT_PLAN.md, UI_UX_DESIGN_SYSTEM.md, DATA_ARCHITECTURE.md, TECHNICAL_ARCHITECTURE.md, CODING_STANDARDS_AND_CONTEXT.md, ENFORCEMENT_SYSTEM.md)
+2. **Post-Execution Updates**: Update DEVELOPMENT_PLAN.md after each content creation step
+3. **Final Document Adherence Check**: Run comprehensive verification of all created content
+4. **Security Validation**: Execute DOMPurify sanitization checks on all generated content
+5. **Prompt Preservation**: Save this prompt to T2-1 for future reference
+
+## TECHNICAL ARCHITECTURE COMPLIANCE
+
+**MANDATORY TECH STACK** (from TECHNICAL_ARCHITECTURE.md):
+
+### **Frontend Stack:**
+- **Web Application**: HTML5, CSS3, Vanilla JavaScript (upgradeable to React)
+- **Mobile Application**: React Native (single codebase for iOS/Android)
+- **UI Framework**: Material Design with custom theming
+- **State Management**: Context API with local storage persistence
+- **Design Approach**: Responsive, mobile-first approach
+
+### **Backend Infrastructure:**
+- **Core Backend**: Firebase with Cloud Functions (serverless)
+- **Database**: Firestore (NoSQL document database)
+- **Authentication**: Firebase Auth (email/password, social logins)
+- **File Storage**: Firebase Storage (user content/media)
+- **Analytics**: Firebase Analytics (user engagement tracking)
+
+### **Platform Requirements:**
+- **PWA Capabilities**: Service workers, offline access, installable manifest
+- **Browser Compatibility**: Chrome, Firefox, Safari, Edge (latest versions)
+- **SEO Optimization**: Meta tags, structured data, auto-generated sitemap
+- **Native Features**: Push notifications, camera access, biometric authentication
+- **Performance**: 60fps animations, <3 second load times
+
+### **Security Standards:**
+- **GDPR Compliance**: User data protection and rights
+- **Multi-Factor Authentication**: Strong password policies + MFA
+- **End-to-End Encryption**: HTTPS for all data transmission
+- **API Security**: Authentication checks, rate limiting
+- **Code Security**: Input sanitization, XSS prevention
+- **Backup Strategy**: Regular Firestore backups, disaster recovery
+
+## DATA ARCHITECTURE & SYNCHRONIZATION
+
+**MANDATORY DATA STANDARDS** (from DATA_ARCHITECTURE.md):
+
+### **Database Structure:**
+- **Primary Database**: Firestore (NoSQL document database)
+- **Local Storage**: Client-side caching for offline access
+- **Synchronization**: Real-time sync between local and Firestore
+
+### **Core Collections:**
+- **users**: User profiles, preferences, authentication data
+- **userProgress**: Learning progress, badges, streaks, portfolio
+- **content**: Technology learning modules (25 technologies)
+- **aiPrompts**: Structured AI prompt library
+
+### **Data Models:**
+- **User Model**: uid, email, displayName, preferences, timestamps
+- **Progress Model**: completedChapters, earnedBadges, learningStreaks, portfolio
+- **Content Model**: Complete JSON schema for technology modules
+
+### **Synchronization Strategy:**
+- **Offline-First**: Local storage for fast access and offline functionality
+- **Real-time Updates**: Live synchronization when network available
+- **Conflict Resolution**: Automatic conflict resolution for data consistency
+- **Cross-Device Sync**: Seamless experience across web and mobile platforms
+
+**MANDATORY STANDARDS** (from CODING_STANDARDS_AND_CONTEXT.md & ENFORCEMENT_SYSTEM.md):
+
+### **Code Formatting Standards:**
+- **Prettier Configuration**: 
+  - No semicolons (`"semi": false`)
+  - Single quotes (`"singleQuote": true`)
+  - Trailing commas ES5 style (`"trailingComma": "es5"`)
+- **Automated Formatting**: All code must be formatted before committing
+- **Pre-commit Hooks**: Husky integration for automatic formatting/linting
+
+### **Code Quality Tools:**
+- **ESLint**: Static code analysis with custom rules
+- **Testing Strategy**: Jest + React Testing Library
+  - Unit tests for all functions/components
+  - Integration tests for component interactions
+  - E2E tests with Cypress for critical user flows
+  - TDD (Test-Driven Development) encouraged
+
+### **Performance Standards:**
+- **Bundle Size Monitoring**: Regular bundle analysis
+- **Load Times**: <3 second load times
+- **Asset Optimization**: Code-splitting, image/font optimization
+- **60fps Animations**: Smooth animations across all platforms
+
+### **Accessibility Standards:**
+- **WCAG AA Compliance**: Full accessibility support
+- **Semantic HTML**: Proper semantic markup
+- **Keyboard Navigation**: All interactive elements keyboard accessible
+- **Alt Text**: All images must have descriptive alt text
+- **Screen Reader Support**: Full screen reader compatibility
+
+### **Enforcement System Requirements:**
+- **Automated Guardian**: CI/CD pipeline with GitHub Actions
+- **Live Feedback**: ESLint/Prettier in IDE for real-time feedback
+- **Knowledgeable Prompter**: Context-rich prompts referencing all documentation
+- **Quality Gates**: No non-compliant code can be merged
+- **Visual Regression Testing**: UI matches design system specifications
+
+**MANDATORY CONTENT STANDARDS** (from AI_DEVELOPMENT_PROMPT.md):
+
+### **Engaging and Relatable Tone:**
+- **Use Analogies**: Explain complex concepts with simple, real-world analogies
+- **Conversational Style**: Friendly, encouraging voice - avoid overly academic language
+- **Practical Examples**: Connect to real-world problems learners might solve
+
+### **Focus on the "Why":**
+- **Explain Purpose**: Describe what features do AND why they're useful
+- **Contextual Examples**: Show when and why developers would need each concept
+- **Real-World Application**: Demonstrate practical use cases throughout
+
+### **Technical Accuracy and Readability:**
+- **Escape Inline HTML**: Properly escape HTML tags (e.g., `&lt;p&gt;` not `<p>`)
+- **Clear Code Snippets**: Concise, well-commented, directly relevant examples
+- **Logical Progression**: Build concepts progressively from basic to advanced
+
+### **Security & Accessibility:**
+- **DOMPurify Compliance**: All HTML content must be sanitized before rendering
+- **WCAG AA Compliance**: Ensure accessibility standards are met
+- **Cross-Site Scripting Prevention**: No unsanitized dynamic content
+
+### **Learning Experience Design:**
+- **Progressive Difficulty**: Start simple, build to complex concepts
+- **Practical Exercises**: Include hands-on activities for each section
+- **Assessment Integration**: Build in quizzes and practical evaluations
+- **AI Prompt Integration**: Include contextual AI assistance throughout
+
+**Target Categories (All 10 must be completed):**
+- [ ] Learning Objectives
+- [ ] Sections & Content
+- [ ] Code Examples
+- [ ] AI Prompts
+- [ ] Resources
+- [ ] Tools Required
+- [ ] Best Practices
+- [ ] Common Pitfalls
+- [ ] Career Relevance
+
+## COMPREHENSIVE COMPLIANCE CHECKLIST
+
+**FINAL VERIFICATION REQUIREMENTS:**
+
+### **Technical Architecture Compliance:**
+- [ ] Firebase integration for data persistence
+- [ ] Responsive design with mobile-first approach
+- [ ] Material Design component usage
+- [ ] PWA capabilities implementation
+- [ ] Cross-platform compatibility (web + mobile)
+
+### **UI/UX Design System Compliance:**
+- [ ] Roboto typography with Material Design scale
+- [ ] 8px spacing grid system
+- [ ] Specified color palette usage
+- [ ] Component styling standards (buttons, cards, forms)
+- [ ] Accessibility standards (WCAG AA)
+- [ ] Animation specifications (200ms/300ms durations)
+
+### **Data Architecture Compliance:**
+- [ ] JSON schema adherence for content structure
+- [ ] Firestore collection structure
+- [ ] Local storage synchronization
+- [ ] Real-time data updates
+- [ ] Offline functionality support
+
+### **Coding Standards Compliance:**
+- [ ] Prettier formatting (no semicolons, single quotes)
+- [ ] ESLint rules adherence
+- [ ] JSDoc documentation for functions
+- [ ] Component-based architecture
+- [ ] Service layer abstraction
+
+### **Security & Quality Assurance:**
+- [ ] DOMPurify sanitization for all HTML content
+- [ ] XSS prevention measures
+- [ ] Input validation implementation
+- [ ] GDPR compliance considerations
+- [ ] Performance optimization (<3s load times)
+
+### **Content Standards Compliance:**
+- [ ] Engaging, conversational tone
+- [ ] Progressive difficulty structure
+- [ ] Practical examples and exercises
+- [ ] Comprehensive assessments
+- [ ] Real-world application focus
+
+### **Documentation & Process Compliance:**
+- [ ] DEVELOPMENT_PLAN.md updates after each phase
+- [ ] CHANGELOG.md maintenance
+- [ ] ADR documentation for decisions
+- [ ] Git conventional commits
+- [ ] CI/CD pipeline compliance
+
+### PHASE 1: Content Planning & Structure
+1. **Analyze existing Node.js content structure** in the project
+2. **Review DEVELOPMENT_PLAN.md** for Node.js requirements
+3. **Create content roadmap** with specific deliverables for each category
+4. **Update DEVELOPMENT_PLAN.md** with Phase 1 completion status
+
+### PHASE 2: Core Content Development
+1. **Learning Objectives** - Create comprehensive learning goals
+2. **Sections & Content** - Develop structured lesson content
+3. **Code Examples** - Build practical, runnable examples
+4. **AI Prompts** - Design contextual AI assistance prompts
+5. **Update DEVELOPMENT_PLAN.md** after each category completion
+
+### PHASE 3: Supporting Materials
+1. **Resources** - Curate learning resources and references
+2. **Tools Required** - Document development environment setup
+3. **Best Practices** - Establish coding standards and patterns
+4. **Common Pitfalls** - Document frequent mistakes and solutions
+5. **Update DEVELOPMENT_PLAN.md** after each category completion
+
+### PHASE 4: Professional Integration
+1. **Career Relevance** - Connect Node.js skills to job market
+2. **Integration Testing** - Verify content works with existing platform
+3. **Update DEVELOPMENT_PLAN.md** with final completion status
+
+### PHASE 5: Quality Assurance & Documentation
+1. **Final Document Adherence Check** - Verify all 10 categories meet specifications
+2. **DOMPurify Security Validation** - Sanitize all HTML content
+3. **Cross-reference Validation** - Ensure content aligns with other tiers
+4. **Final DEVELOPMENT_PLAN.md Update** - Mark Node.js as 100% complete
+
+## UI/UX DESIGN SYSTEM COMPLIANCE
+
+**MANDATORY DESIGN REQUIREMENTS** (from UI_UX_DESIGN_SYSTEM.md):
+
+### **Core Design Principles:**
+- **Clarity**: Clean, intuitive interface design
+- **Consistency**: Uniform look and feel across all components
+- **Accessibility**: WCAG AA compliance for all content
+- **Feedback**: Clear user interaction feedback
+
+### **Color Palette:**
+- **Primary**: Blue `#2196F3` (headers, primary buttons, active states)
+- **Secondary**: Orange `#FF9800` (highlights, progress indicators)
+- **Success**: Green `#4CAF50` (completion indicators)
+- **Error**: Red `#F44336` (error messages)
+- **Text Primary**: Black `#212121`
+- **Text Secondary**: Grey `#757575`
+- **Background**: White/Light Grey `#FFFFFF` / `#F5F5F5`
+
+### **Typography:**
+- **Font Family**: Roboto for all text
+- **Scale**: Material Design typography hierarchy
+  - Headline 1-6 for titles and headings
+  - Subtitle 1-2 for section titles
+  - Body 1-2 for content text
+  - Button for button labels
+  - Caption for helper text
+
+### **Spacing & Layout:**
+- **Base Unit**: 8px (all spacing multiples: 8, 16, 24, 32, 48, 64px)
+- **Layout Standards**:
+  - Fixed header navigation
+  - Sidebar navigation (desktop) / Bottom tab bar (mobile)
+  - Scrollable content with consistent padding (16px mobile, 24px desktop)
+  - Footer with navigation and completion status
+
+### **Component Styling:**
+- **Buttons**: 20px radius, Material Design ripple effects, raised/flat types
+- **Cards**: 4px radius, Material Design shadow system (2dp standard, 8dp hover)
+- **Forms**: Material text fields with floating labels, real-time validation
+- **Modals**: Smooth slide-in animations, blurred backdrop
+- **Animations**: 200ms micro-interactions, 300ms page transitions
+
+### **Lesson Content Presentation:**
+- **Structured Rendering**: Visual separation of content, key topics, code examples
+- **Visual Hierarchy**: Clear typographic hierarchy with prominent titles
+- **Key Topics Styling**: Render as "pills" or "tags" in highlighted containers
+- **Professional Code Blocks**: High-contrast dark background, monospace font
+
+### **Progress Tracking UI:**
+- **Chapter Completion**: Visual progress bars with percentage completion
+- **Skill Badges**: Earned badges for technology mastery
+- **Learning Streaks**: Daily streak counters and rewards
+- **Tier Advancement**: Unlocking based on prerequisite completion
+
+### **Node.js-Specific UI Components:**
+- **Terminal/Command Line Interface**: Styled terminal windows for CLI examples
+- **File Tree Visualization**: Visual representation of Node.js project structures
+- **API Testing Interface**: Interactive areas for testing Node.js APIs
+- **Performance Monitoring**: Real-time display of Node.js application metrics
+- **Error Handling UI**: Clear error messages and debugging interfaces
+
+### JSON Data Structure Compliance
+
+**MANDATORY JSON SCHEMA** (from DATA_ARCHITECTURE.md and AI_DEVELOPMENT_PROMPT.md):
+
+```json
+{
+  "id": "nodejs",
+  "tier": 2,
+  "name": "Node.js",
+  "description": "Server-side JavaScript runtime for building scalable applications",
+  "difficulty": "intermediate",
+  "estimatedHours": "40-50 hours",
+  "prerequisites": ["javascript", "json"],
+  "learningObjectives": ["array of specific learning goals"],
+  "sections": [
+    {
+      "title": "Section Name",
+      "content": "Learning content in Markdown format",
+      "keyTopics": ["array of strings"],
+      "practicalExercises": ["array of exercise descriptions"],
+      "codeExamples": [
+        {
+          "language": "javascript",
+          "code": "string"
+        }
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "title": "Project Name",
+      "description": "Project requirements and goals"
+    }
+  ],
+  "assessments": [
+    {
+      "type": "quiz|evaluation",
+      "questions": [
+        {
+          "question": "string",
+          "options": ["array of strings"],
+          "correctAnswer": "string"
+        }
+      ]
+    }
+  ],
+  "aiPrompts": ["array of prompt-ids"],
+  "resources": [
+    {
+      "name": "Resource Name",
+      "url": "string"
+    }
+  ],
+  "toolsRequired": ["array of strings"],
+  "bestPractices": ["array of strings"],
+  "commonPitfalls": ["array of strings"],
+  "careerRelevance": "string"
+}
+```
+
+### Content Categories Mapping to JSON Fields:
+
+- **Learning Objectives** → `learningObjectives` array
+- **Sections & Content** → `sections` array with `content`, `keyTopics`, `practicalExercises`
+- **Code Examples** → `codeExamples` array within sections
+- **AI Prompts** → `aiPrompts` array
+- **Resources** → `resources` array
+- **Tools Required** → `toolsRequired` array
+- **Best Practices** → `bestPractices` array
+- **Common Pitfalls** → `commonPitfalls` array
+- **Career Relevance** → `careerRelevance` string
+
+## QUALITY ASSURANCE CHECKLIST
+
+### Pre-Execution Verification:
+- [ ] Confirm DEVELOPMENT_PLAN.md Node.js section is marked as pending
+- [ ] Verify project structure supports Node.js content integration
+- [ ] Check existing content patterns for consistency
+
+### Content Quality Standards:
+- [ ] All code examples are tested and functional
+- [ ] Content follows progressive difficulty structure
+- [ ] AI prompts are contextual and helpful
+- [ ] Resources are current and accessible
+- [ ] Best practices reflect industry standards
+- [ ] **JSON Schema Compliance**: All content matches the defined JSON structure
+- [ ] **Field Completeness**: All required JSON fields are populated
+- [ ] **Data Types**: Arrays and objects follow specified formats
+- [ ] **Markdown Content**: Section content uses proper Markdown formatting
+
+### Security & Compliance:
+- [ ] All HTML content passes DOMPurify validation
+- [ ] No hardcoded sensitive information
+- [ ] Secure coding practices demonstrated
+- [ ] Input validation examples included
+
+### Documentation Compliance:
+- [ ] All 10 categories completed with checkmarks
+- [ ] DEVELOPMENT_PLAN.md updated after each phase
+- [ ] Content integrates with existing platform structure
+- [ ] Cross-references to other technologies included
+
+## PROJECT OVERVIEW & DEPENDENCIES
+
+**PROJECT CONTEXT** (from README.md & package.json):
+
+### **Project Description:**
+- **AI-First Application**: Comprehensive reference guide for 25 technologies
+- **Structured Curriculum**: 5-tier learning path from basic to advanced
+- **Cross-Platform**: Web application + native iOS/Android apps
+- **AI Integration**: Personalized prompts and intelligent recommendations
+
+### **Core Dependencies:**
+- **React**: `^19.1.1` - Main UI framework
+- **Firebase**: `^12.2.1` - Backend infrastructure (Auth, Firestore, Storage)
+- **React Router**: `^7.8.2` - Client-side routing
+- **DOMPurify**: `^3.2.6` - HTML sanitization and XSS prevention
+
+### **Development Dependencies:**
+- **Vite**: `^7.1.4` - Build tool and dev server
+- **Vitest**: `^3.2.4` - Unit testing framework
+- **Cypress**: `^15.1.0` - E2E testing
+- **ESLint**: `^9.35.0` - Code linting
+- **Prettier**: `^3.6.2` - Code formatting
+- **Husky**: `^9.1.7` - Git hooks
+- **Lighthouse**: `^12.8.2` - Performance auditing
+
+### **Key Features:**
+- **Technology Reference**: 25 comprehensive technology guides
+- **Progress Tracking**: Learning progress and achievement system
+- **Text-to-Speech**: Audio learning capabilities
+- **Offline Access**: PWA features for offline learning
+- **Cross-Platform Consistency**: Unified experience across all platforms
+
+**Execute this prompt with full adherence to all requirements above.**
+
+**Final Output Requirements:**
+1. Complete Node.js content across all 10 categories
+2. **JSON Format Compliance**: All content must be generated in the exact JSON schema defined above
+3. Updated DEVELOPMENT_PLAN.md with completion status
+4. DOMPurify validation results
+5. Document adherence verification report
+6. This prompt saved as T2-1 for future reference
+
+**JSON Output Structure:**
+- Save the complete Node.js module as `src/data/nodejs.js`
+- Use exact JavaScript module export format: `export default nodejsContent;`
+- Ensure all required fields are populated according to the schema
+- Validate JavaScript syntax before submission
+- Include practical exercises and assessments for each section
+- Add import statement to `src/data/lessons.js`: `import nodejsContent from './nodejs.js';`
+- Add to modules array in lessons.js: `nodejsContent,`
+
+**Integration Verification Steps:**
+1. **File Creation**: Create `src/data/nodejs.js` with proper module structure
+2. **Import Addition**: Update `src/data/lessons.js` to import and include Node.js content
+3. **Syntax Validation**: Ensure no JavaScript syntax errors
+4. **Content Validation**: Verify all required fields are present and properly formatted
+5. **Navigation Testing**: Confirm Node.js appears in sidebar navigation
+6. **Display Testing**: Verify content renders correctly in LessonView component
+7. **Progress Testing**: Confirm progress tracking works for Node.js lessons
