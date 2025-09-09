@@ -1,5 +1,6 @@
 import { doc, getDoc, updateDoc, arrayUnion, setDoc } from 'firebase/firestore';
 import { db } from '../firebase/config'; // Assuming you have a firebase.js config file
+import { logUserActivity } from './analyticsService';
 
 const progressCollection = 'userProgress';
 
@@ -47,6 +48,9 @@ export const updateUserProgress = async (userId, lessonId) => {
         completedLessons: [lessonId]
       });
     }
+
+    // Log the activity
+    await logUserActivity(userId, 'lesson_completed', { lessonId });
   } catch (error) {
     console.error("Error updating user progress:", error);
   }

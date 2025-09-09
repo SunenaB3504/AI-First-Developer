@@ -4,6 +4,7 @@
  */
 import { db } from '../firebase/config';
 import { doc, getDoc, updateDoc, collection, addDoc, getDocs, serverTimestamp, query, where } from 'firebase/firestore';
+import { logUserActivity } from './analyticsService';
 
 /**
  * Updates a user's learning streak based on their activity.
@@ -52,6 +53,11 @@ export const updateLearningStreak = async (userId) => {
     currentStreak,
     lastActivityDate: serverTimestamp(),
   });
+
+  // Log streak update if it increased
+  if (currentStreak > (userData.currentStreak || 0)) {
+    await logUserActivity(userId, 'streak_updated', { newStreak: currentStreak });
+  }
 };
 
 /**
@@ -70,6 +76,9 @@ export const awardBadge = async (userId, badge) => {
       ...badge,
       dateAwarded: serverTimestamp(),
     });
+
+    // Log the badge earning activity
+    await logUserActivity(userId, 'badge_earned', { badgeId: badge.id, badgeName: badge.name });
   }
 };
 
